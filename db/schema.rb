@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_19_214140) do
+ActiveRecord::Schema.define(version: 2020_07_19_224039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2020_07_19_214140) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_books_on_slug", unique: true
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -38,10 +40,12 @@ ActiveRecord::Schema.define(version: 2020_07_19_214140) do
   create_table "titans", force: :cascade do |t|
     t.string "name"
     t.text "body"
-    t.text "main_image"
     t.text "thumb_image"
+    t.text "main_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_titans_on_slug", unique: true
   end
 
 end

@@ -3,5 +3,6 @@ class Book < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
   validates_presence_of :title, :author, :body
+  belongs_to :topic
 end
  

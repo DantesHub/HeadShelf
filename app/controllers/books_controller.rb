@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: %i[show edit update destroy]
+  before_action :set_book, only: %i[show edit update destroy toggle_status]
 
   # GET /books
   # GET /books.json
@@ -54,6 +54,16 @@ class BooksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
     end
+  end
+
+  def toggle_status
+    if @book.draft?
+      @book.published!
+    else
+      @book.draft!
+    end
+
+    redirect_to books_url, notice: 'Post status has been updated.'
   end
 
   private

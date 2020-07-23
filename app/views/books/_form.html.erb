@@ -26,6 +26,12 @@
     <%= form.text_area :body %>
   </div>
 
+  <ul>
+    <%= form.fields_for :tag_list do |tag_form|  %>
+      <li>Bing</li>
+    <% end %>
+  </ul>
+
   <div class="actions">
     <%= form.submit %>
   </div>

@@ -1,14 +1,14 @@
 class Book < ApplicationRecord
   acts_as_taggable_on :tags
+  # accepts_nested_attributes_for :taggables,
   enum status: { draft: 0, published: 1 }
   extend FriendlyId
   friendly_id :title, use: :slugged
   validates_presence_of :title, :author, :body
-  belongs_to :topic
 
   def self.psychology
-    tagged_with(%w[banging cool], any: true)
+    Book.tagged_with(%w[psychology], any: true).order('created_at ASC')
   end
 
-  scope :marketing_items, -> { where(topic_id: 3) }
+  # scope :marketing_items, -> { where(topic_id: 3) }
 end

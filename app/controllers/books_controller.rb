@@ -5,11 +5,14 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
+    @page_title = 'BrainStack | Books'
   end
 
   # GET /books/1
   # GET /books/1.json
-  def show; end
+  def show
+    @page_title = @book.title
+  end
 
   # GET /books/new
   def new
@@ -75,6 +78,6 @@ class BooksController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def book_params
-    params.require(:book)
+    params.require(:book).permit(:title, :author, :body, tag_list: [:tag])
   end
 end

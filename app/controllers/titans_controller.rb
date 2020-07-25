@@ -1,5 +1,6 @@
 class TitansController < ApplicationController
   before_action :set_titan, only: [:show, :edit, :update, :destroy]
+  layout "titan"
 
   # GET /titans
   # GET /titans.json

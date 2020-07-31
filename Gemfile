@@ -25,6 +25,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'bootstrap', '~> 4.5.0'
+gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'jbuilder', '~> 2.5'
 
 # Use Redis adapter to run Action Cable in production

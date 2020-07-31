@@ -1,17 +1,17 @@
 class TitansController < ApplicationController
-  before_action :set_titan, only: [:show, :edit, :update, :destroy]
-  layout "titan"
+  before_action :set_titan, only: %i[show edit update destroy]
+  access all: %i[show index], user: { except: %i[destroy new update edit] }, site_admin: :all
+  layout 'titan'
 
   # GET /titans
   # GET /titans.json
   def index
-    @titans = Titan.all 
+    @titans = Titan.all
   end
 
   # GET /titans/1
   # GET /titans/1.json
-  def show
-  end
+  def show; end
 
   # GET /titans/new
   def new
@@ -19,8 +19,7 @@ class TitansController < ApplicationController
   end
 
   # GET /titans/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /titans
   # POST /titans.json
@@ -63,13 +62,14 @@ class TitansController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_titan
-      @titan = Titan.friendly.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def titan_params
-      params.require(:titan).permit(:name, :body, :thumb_image, :main_image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_titan
+    @titan = Titan.friendly.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def titan_params
+    params.require(:titan).permit(:name, :body, :thumb_image, :main_image)
+  end
 end

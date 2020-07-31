@@ -14,12 +14,10 @@
   </thead>
 
   <tbody>
-    <% cache do %>
     <%= render @books %>
-    <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<%= link_to 'New Book', new_book_path if logged_in?(:site_admin) %>

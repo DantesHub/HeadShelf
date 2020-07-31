@@ -1,5 +1,5 @@
 <p><%= link_to titan.name, titan%></p>
 <p><%= titan.body %></p>
 <%= image_tag titan.thumb_image if !titan.thumb_image.nil? %>
-<%= link_to "Edit", edit_titan_path(titan.id) %>
-<%= link_to "Delete Titan", titan, method: :delete, data: { confirm: 'Are you sure'} %>
+<%= link_to "Edit", edit_titan_path(titan.id) if logged_in?(:site_admin)  %>
+<%= link_to "Delete Titan", titan, method: :delete, data: { confirm: 'Are you sure'} if logged_in?(:site_admin)  %>

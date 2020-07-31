@@ -2,8 +2,8 @@
         <td><%= article.title %></td>
         <td>Published <%= distance_of_time_in_words(article.created_at, Time.now) %> ago</td>
         <td><%= article.body %></td>
-        <td><%= link_to  article.status, toggle_status_article_path(article) %></td>
+        <td><%= link_to  article.status, toggle_status_article_path(article) if logged_in?(:site_admin) %></td>
         <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) if logged_in?(:site_admin)  %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)  %></td>
       </tr>

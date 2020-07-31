@@ -1,4 +1,4 @@
 <h1>Titans</h1>
 
-<%= link_to "Create new Titan", new_titan_path %>
+<%= link_to "Create new Titan", new_titan_path if logged_in?(:site_admin)  %>
 <%= render @titans %>

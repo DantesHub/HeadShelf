@@ -15,5 +15,5 @@
   <%= @book.body %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Edit', edit_book_path(@book) if logged_in?(:site_admin)  %> |
 <%= link_to 'Back', books_path %>

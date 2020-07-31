@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy toggle_status]
+  access all: [:show, :index], user: {except: [:destroy, :new, :update, :edit]}, site_admin: :all
 
   # GET /articles
   # GET /articles.json

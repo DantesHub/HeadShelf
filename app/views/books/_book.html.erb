@@ -1,9 +1,9 @@
     <tr>
       <td><%= book.title %></td>
       <td><%= book.author %></td>
-      <td><%= link_to  book.status, toggle_status_book_path(book) %></td>
+      <td><%= link_to  book.status, toggle_status_book_path(book) if logged_in?(:site_admin)  %></td>
       <td><%= book.body %></td>
       <td><%= link_to 'Show', book %></td>
-      <td><%= link_to 'Edit', edit_book_path(book) %></td>
-      <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Edit', edit_book_path(book) if logged_in?(:site_admin)  %></td>
+      <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }  if logged_in?(:site_admin) %></td>
     </tr>

@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[show edit update destroy toggle_status]
+  access all: %i[show index], user: { except: %i[destroy new update edit] }, site_admin: :all
   layout 'book'
   # GET /books
   # GET /books.json

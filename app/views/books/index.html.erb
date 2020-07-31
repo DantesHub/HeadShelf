@@ -14,7 +14,9 @@
   </thead>
 
   <tbody>
+    <% cache do %>
     <%= render @books %>
+    <% end %>
   </tbody>
 </table>
 

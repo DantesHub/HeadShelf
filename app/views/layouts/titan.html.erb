@@ -10,15 +10,8 @@
   </head>
 
   <body>
-  <div><%= link_to "Books", root_path  %></div>
-    <div><%= link_to "Titans",titans_path%></div>
-  <div><%= link_to "Articles", articles_path %></div>
-  <% if current_user %>
-   <%= link_to "Logout" , destroy_user_session_path, method: :delete %>
-   <% else %>
-       <%= link_to "Register" , new_user_registration_path %>
-       <%= link_to "Login" , new_user_session_path %>
-   <% end %>
+  <%= render "shared/nav" %>
+  <%= login_helper %>
     <%= yield %>
     <br>
     <hr>

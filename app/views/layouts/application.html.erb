@@ -11,14 +11,12 @@
 </head>
 
 <body>
-  <div><%= link_to "Books", root_path  %></div>
-  <div><%= link_to "Titans",titans_path%></div>
-  <div><%= link_to "Articles", articles_path %></div>
-  <%= login_helper %>
-  <%= yield %>
-  <br>
-  <hr>
-  <%= source_helper %>
+         <%= render 'shared/nav' %>
+        <%= login_helper %>
+        <%= yield %>
+        <br>
+        <hr>
+        <%= source_helper %>
 </body>
 
 </html>

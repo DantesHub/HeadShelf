@@ -1,10 +1,4 @@
 <h1>Titans</h1>
 
 <%= link_to "Create new Titan", new_titan_path %>
-<% @titans.each do |titan| %>
-<p><%= link_to titan.name, titan%></p>
-<p><%= titan.body %></p>
-<%= image_tag titan.thumb_image if !titan.thumb_image.nil? %>
-<%= link_to "Edit", edit_titan_path(titan.id) %>
-<%= link_to "Delete Titan", titan, method: :delete, data: { confirm: 'Are you sure'} %>
-<% end %>
+<%= render @titans %>

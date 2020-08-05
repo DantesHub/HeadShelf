@@ -36,7 +36,7 @@ puts '10 articles created'
   Titan.create!(
     name: 'Elon',
     body: 'quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
-    thumb_image: 'https://placehold.it/350x200',
+    thumb_image: 'https://placehold.it/300x300',
     main_image: 'https://placehold.it/600x400'
   )
 end
@@ -44,7 +44,7 @@ end
   Titan.create!(
     name: 'David Goggins',
     body: 'quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
-    thumb_image: 'https://placehold.it/350x200',
+    thumb_image: 'https://placehold.it/300x300',
     main_image: 'https://placehold.it/600x400'
   )
 end

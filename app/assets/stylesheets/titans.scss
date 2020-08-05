@@ -16,6 +16,15 @@
   }
 }
 
+.row-2 {
+  padding: 15px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titan {
+  margin: 15px;
+}
 .jumbotron p:last-child {
   margin-bottom: 0;
 }

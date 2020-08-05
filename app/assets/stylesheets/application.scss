@@ -1,6 +1,12 @@
 @import "bootstrap";
 /* stylelint-disable selector-list-comma-newline-after */
 
+.btn {
+  background-color: black;
+  border-color: black;
+}
+
+
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;

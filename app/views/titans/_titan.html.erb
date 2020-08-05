@@ -1,5 +1,13 @@
-<p><%= link_to titan.name, titan%></p>
-<p><%= titan.body %></p>
-<%= image_tag titan.thumb_image if !titan.thumb_image.nil? %>
-<%= link_to "Edit", edit_titan_path(titan.id) if logged_in?(:site_admin)  %>
-<%= link_to "Delete Titan", titan, method: :delete, data: { confirm: 'Are you sure'} if logged_in?(:site_admin)  %>
+<!-- TODO: hover over shows titans name -->
+              <div class="card mb-4 box-shadow">
+              <%= image_tag titan.thumb_image if !titan.thumb_image.nil?%>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>

@@ -1,25 +1,19 @@
-    <main role="main">
-       <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Album example</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-          <p>
-          </p>
-        </div>
-      </section>
-    <div ><%= link_to "Create new Titan", new_titan_path if logged_in?(:site_admin)  %></div>
-      <div class="album py-5 bg-light">
-        <div class="container">
-
-          <div class="row row-2">
-      
-        
-          <%= render @titans %>
-            
-           
-          </div>
-        </div>
+<main role="main" style="margin-top: 3rem">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Album example</h1>
+      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+      <p>
+      </p>
+    </div>
+  </section>
+  <div><%= link_to "Create new Titan", new_titan_path if logged_in?(:site_admin)  %></div>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-2">
+        <%= render @titans %>
       </div>
+    </div>
+  </div>
 
-    </main>
-
+</main>

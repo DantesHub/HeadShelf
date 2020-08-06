@@ -22,17 +22,17 @@ class TitansController < ApplicationController
   def edit; end
 
   # POST /titans
-  # POST /titans.json
   def create
+    # puts 'fasdfasdfasdfsfsafsdafasdfasdffsfoasufhuisdbgfisdbfiusdb'
     @titan = Titan.new(titan_params)
-
+    @titan.update(thumb_image: 'https://placehold.it/300x300')
+    @titan.update(main_image: 'https://placehold.it/600x400')
     respond_to do |format|
       if @titan.save
+        puts 'fasdfasdfasdfsfsafsdafasdfasdffsfoasufhuisdbgfisdbfiusdb'
         format.html { redirect_to @titan, notice: 'Titan was successfully created.' }
-        format.json { render :show, status: :created, location: @titan }
       else
         format.html { render :new }
-        format.json { render json: @titan.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +43,8 @@ class TitansController < ApplicationController
     respond_to do |format|
       if @titan.update(titan_params)
         format.html { redirect_to @titan, notice: 'Titan was successfully updated.' }
-        format.json { render :show, status: :ok, location: @titan }
       else
         format.html { render :edit }
-        format.json { render json: @titan.errors, status: :unprocessable_entity }
       end
     end
   end

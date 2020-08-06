@@ -1,17 +1,5 @@
-<h1>Edit This Titan</h1>
-<%= form_with(model: @titan, local: true) do |form| %>
+<div class = "container titan-form">
+  <h1>Edit This Titan</h1>
+    <%= render 'form', titan: @titan %>
 
-<div class="field">
-  <%= form.label :name %>
-  <%= form.text_field :name %>
 </div>
-
-<div class="field">
-  <%= form.label :body %>
-  <%= form.text_field :body %>
-</div>
-
-<div class="actions">
-  <%= form.submit %>
-</div>
-<% end %>

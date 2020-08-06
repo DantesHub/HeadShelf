@@ -6,7 +6,7 @@ class TitansController < ApplicationController
   # GET /titans
   # GET /titans.json
   def index
-    @titans = Titan.all
+    @titans = Titan.by_position
   end
 
   # GET /titans/1

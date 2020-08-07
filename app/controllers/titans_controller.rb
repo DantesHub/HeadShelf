@@ -1,7 +1,7 @@
 class TitansController < ApplicationController
   before_action :set_titan, only: %i[show edit update destroy]
   skip_before_action :verify_authenticity_token
-  access all: %i[show index], user: { except: %i[destroy new update edit] }, site_admin: :all
+  access all: %i[show index], user: { except: %i[destroy new update edit sort] }, site_admin: :all
   layout 'titan'
 
   # GET /titans

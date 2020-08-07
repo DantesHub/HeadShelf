@@ -1,5 +1,6 @@
 class TitansController < ApplicationController
   before_action :set_titan, only: %i[show edit update destroy]
+  skip_before_action :verify_authenticity_token
   access all: %i[show index], user: { except: %i[destroy new update edit] }, site_admin: :all
   layout 'titan'
 
@@ -7,6 +8,14 @@ class TitansController < ApplicationController
   # GET /titans.json
   def index
     @titans = Titan.by_position
+  end
+
+  def sort
+    params[:order].each do |_key, value|
+      Titan.find(value[:id]).update(position: value[:position])
+    end
+
+    render nothing: true
   end
 
   # GET /titans/1

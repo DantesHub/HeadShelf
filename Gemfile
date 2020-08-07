@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+gem 'jquery-rails', '~> 4.4'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

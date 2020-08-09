@@ -17,14 +17,9 @@ padding-bottom: var(--jumbotron-padding-y);
   }
 }
 
-.row-2 {
-  padding: 15px;
-    display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .titan {
-  margin: 15px;
+  margin: 10px;
 }
 .jumbotron p:last-child {
   margin-bottom: 0;
@@ -61,7 +56,12 @@ footer p {
 .titan-form {
   padding: 20px;
 }
-
+.row-2 {
+  padding: 15px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .titan-container {
   padding-top: 30px;
 }

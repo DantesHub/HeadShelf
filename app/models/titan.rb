@@ -1,7 +1,9 @@
 class Titan < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
-  validates_presence_of :name, :body, :main_image, :thumb_image
+  mount_uploader :thumb_image, TitanUploader
+  mount_uploader :main_image, TitanUploader
+  validates_presence_of :name, :body
 
   def self.by_position
     order('position ASC')

@@ -1,7 +1,7 @@
 <!-- TODO: hover over shows titans name -->
 <a href="/titans/<%= titan.id %>">
   <div class="card mb-4 box-shadow titan" data-id="<%= titan.id %>">
-    <%= image_tag titan.thumb_image if !titan.thumb_image.nil?%>
+    <%= image_tag titan.thumb_image.to_s, width: '100%' %>
     <div class="card-body">
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">

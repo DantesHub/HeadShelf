@@ -48,4 +48,5 @@ end
     main_image: 'https://placehold.it/600x400'
   )
 end
+
 puts '9 titans items created'

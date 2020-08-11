@@ -26,11 +26,10 @@
     <%= form.text_area :body %>
   </div>
 
-  <ul>
-    <%= form.fields_for :tag_list do |tag_form|  %>
-      <li>Bing</li>
-    <% end %>
-  </ul>
+<div class = "form-group">
+      <%= form.label :tag_list %>
+      <%= form.text_area :tag_list, class: 'form-control', rows: 1%>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

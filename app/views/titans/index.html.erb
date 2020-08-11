@@ -8,7 +8,7 @@
     </div>
   </section>
   <div><%= link_to "Create new Titan", new_titan_path if logged_in?(:site_admin)  %></div>
-  <div class="album py-5 bg-light">
+<div class="album py-5 bg-light"
     <div class="container">
       <div class="row row-2 <%= "sortable" if logged_in?(:site_admin) %>">
         <%= render @titans %>

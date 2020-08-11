@@ -10,5 +10,9 @@ class Book < ApplicationRecord
     Book.tagged_with(%w[psychology], any: true).order('created_at ASC')
   end
 
+  def self.science
+    Book.tagged_with(%w[science], any: true).order('created_at ASC')
+    end
+
   # scope :marketing_items, -> { where(topic_id: 3) }
 end

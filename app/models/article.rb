@@ -6,4 +6,8 @@ class Article < ApplicationRecord
   # friendly_id :title, use: :slugged
 
   def set_defaults; end
+
+  def self.recent
+    order('created_at DESC')
+  end
 end

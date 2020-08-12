@@ -5,7 +5,11 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    @books = if logged_in?(:site_admin)
+               Book.recent.all
+             else
+               Book.recent.published
+             end
     @page_title = 'BrainStack | Books'
   end
 

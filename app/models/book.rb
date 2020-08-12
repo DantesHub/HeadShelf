@@ -14,5 +14,9 @@ class Book < ApplicationRecord
     Book.tagged_with(%w[science], any: true).order('created_at ASC')
     end
 
+  def self.recent
+    order('created_at DESC')
+  end
+
   # scope :marketing_items, -> { where(topic_id: 3) }
 end

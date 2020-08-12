@@ -16,8 +16,12 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
-    @page_title = @book.title
+    if logged_in?(:site_admin) || @book.published?
+      @page_title = @book.title
+    else
+      redirect_to books_path, notice: 'You are not authorized to access this page'
   end
+end
 
   # GET /books/new
   def new

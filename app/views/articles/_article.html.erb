@@ -1,11 +1,30 @@
      <div class="blog-post">
-       <h2 class="blog-post-title"><%= link_to article.title.upcase , article %></h2>
-      <p class="blog-post-meta">Published <%= distance_of_time_in_words(article.created_at, Time.now) %> ago </p>
-       <p class="blog-post-meta">
-         <%= link_to  article.status, toggle_status_article_path(article) if logged_in?(:site_admin) %>
-         <%= link_to 'Edit', edit_article_path(article) if logged_in?(:site_admin)  %>
-         <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)  %>
-       </p>
-       <p><%= article.body %></p>
+       <div class="d-flex justify-content-center entry-title">
+         <h2 class="blog-post-title "><%= link_to article.title , article %></h2>
+       </div>
+       <div class="d-flex justify-content-center">
+         <p class="blog-post-meta">Published <%= distance_of_time_in_words(article.created_at, Time.now) %> ago </p>
+       </div>
 
+       <div class="d-flex justify-content-start container">
+         <div class="row">
+
+           <div class="col-md-3">
+             <a href="/articles/<%= article.id %>">
+               <%= image_tag article_img(article.thumb_image.url, 'thumb'), class: 'thumb-pic', width: '100%', width: 150, height: 150 %>
+             </a>
+           </div>
+           <div class="col-md-9 col">
+             <p class="article-preview"><%= article.body.truncate(410,separator: ' ') %></p>
+           </div>
+         </div>
+       </div>
+       <!-- admin buttons -->
+       <p class="blog-post-meta">
+         <%= link_to  article.status, toggle_status_article_path(article) if logged_in?(:site_admin) %>/
+         <%= link_to 'Edit', edit_article_path(article) if logged_in?(:site_admin)  %>/
+         <%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)  %>
+       </p>
+       <!-- admin buttons  end-->
+       <hr class="line">
      </div>

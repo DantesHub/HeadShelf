@@ -1,12 +1,10 @@
-<div class="container">
+<div class="container-show container site-inner">
   <p id="notice"><%= notice %></p>
 
-  <h2>
+  <h2 class = "entry-title ">
     <%= @article.title %>
   </h2>
-  <div>
-    <%= link_to 'Edit', edit_article_path(@article) %>
-  </div>
+      <p class="blog-post-meta">Published <%= @article.created_at.strftime("%B %d, %Y") %> </p>
 
   <p>
     <%= @article.body %>

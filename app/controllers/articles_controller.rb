@@ -5,7 +5,19 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.page(params[:page]).per(5)
+    @articles = if !logged_in?(:site_admin)
+                  if !params[:category].nil?
+                    Article.page(params[:page]).per(5).category(params[:category]).recent.published
+                  else
+                    Article.page(params[:page]).per(5).recent.published
+                end
+                else
+                  if !params[:category].nil?
+                    Article.page(params[:page]).per(5).category(params[:category]).recent.all
+                  else
+                    Article.page(params[:page]).per(5).recent.all
+             end
+          end
   end
 
   # GET /articles/1
@@ -75,6 +87,6 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    params.require(:article).permit(:title, :body, :image, :tag_list)
+    params.require(:article).permit(:title, :body, :thumb_image, :tag_list)
   end
 end

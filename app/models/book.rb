@@ -6,6 +6,8 @@ class Book < ApplicationRecord
   friendly_id :title, use: :slugged
   validates_presence_of :title, :author, :body
 
+  mount_uploader :thumb_image, BookUploader
+
   def self.psychology
     Book.tagged_with(%w[psychology], any: true).order('created_at ASC')
   end

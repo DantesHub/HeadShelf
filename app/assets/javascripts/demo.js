@@ -1,4 +1,4 @@
-
+alert(window.location.href)
 var title = document.getElementById("js-title").textContent
 $.socialfloating({
   icons: "fontawesome5",

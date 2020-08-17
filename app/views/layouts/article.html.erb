@@ -5,31 +5,18 @@
   <title><%= @article_page_title %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <!-- Twitter Card data -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:site" content="@nateliason">
-<meta property="twitter:title" content="30 Year Thinking">
-<meta property="twitter:creator" content="@nateliason">
-<meta property="twitter:image" content="https://uploads-ssl.webflow.com/5ad143610f7efd77b6f188f3/5f1879d9b294e0f3759d74f5_Barack_Obama_and_Shinzo_Abe_at_Sukyabashi_Jiro_April_2014.jpg">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="<%= @seo_keywords %>">
 
 <!-- Open Graph data -->
-<meta property="og:type" content="article" />
-<meta property="og:url" content="<%=@article_url %>" />
-<meta property="og:site_name" content="Brainstack" />
-<meta property="og:image" content="<%= @article_image %>" />
-
-<!-- Twitter Card data -->
-
-
-<!-- Twitter Card data -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@nateliason">
-<meta name="twitter:title" content="30 Year Thinking">
-<meta name="twitter:creator" content="@nateliason">
-<meta name="twitter:image" content="https://uploads-ssl.webflow.com/5ad143610f7efd77b6f188f3/5f1879d9b294e0f3759d74f5_Barack_Obama_and_Shinzo_Abe_at_Sukyabashi_Jiro_April_2014.jpg">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@nytimesbits" />
+<meta name="twitter:creator" content="@nickbilton" />
+<meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
+<meta property="og:title" content="A Twitter for My Sister" />
+<meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
+<meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />
 
   <%= stylesheet_link_tag    'articles', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

@@ -12,14 +12,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag Ckeditor.cdn_url
  %>
-
-<%
-=begin%>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</head> 
-<%
-=end%>
-
+  <%= stylesheet_link_tag 'socialfloating.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+<script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
 <body class = "container">
   <%= render "shared/nav" %>
   <%= yield %>

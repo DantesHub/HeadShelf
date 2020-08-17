@@ -5,6 +5,8 @@
   <h1 class="entry-title"  id = "js-title" >
     <%= @article.title %>
   </h1>
+  <%= rails_social_share_button_tag(@article.title) %>
+
   <div class = "blocking">
   <p class = "author">By <%= @article.author %>&nbsp</p>
   <%= link_to fa_icon('twitter'), @article.twitter, class: 'twitter', target: :_blank if !@article.twitter.nil? %>&nbsp| 

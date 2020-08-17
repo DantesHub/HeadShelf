@@ -38,6 +38,7 @@ gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+gem 'rails-social-share-button'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

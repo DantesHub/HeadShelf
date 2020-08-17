@@ -4,10 +4,12 @@
 <div class = "col-md-3 book-pic">
 <%= image_tag  book_img(@book.thumb_image.url), width: 180, height: 280%>
 </div>
+
 <div class = "col-md-6">
+
 <h1 id = "js-title"><%= @book.title %></h1>
     <div class = "blocking"><p style = "font-weight: bold; font-size: 20px">Author: &nbsp</p><p class = "author-2"><%= @book.author%></p>
-  </div>P
+  </div>
     <a href = "https://<%= buy(@book.buy_link) %>" target = "_blank" class = "buy">Read The Original </a>
       
   </div>

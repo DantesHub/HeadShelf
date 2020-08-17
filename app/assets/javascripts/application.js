@@ -20,4 +20,5 @@
 //= require cocoon
 //= require turbolinks
 //= require gritter
+//= require rails-social-share-button
 //= require_tree .

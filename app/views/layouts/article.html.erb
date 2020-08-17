@@ -14,6 +14,14 @@
 <meta property="og:url" content="<%=@article_url %>" />
 <meta property="og:site_name" content="Brainstack" />
 <meta property="og:image" content="<%= @article_image %>" />
+
+<!-- Twitter Card data -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="<%=@article_url %>">
+<meta property="twitter:title" content="30 Year Thinking">
+<meta property="twitter:image" content="https://uploads-ssl.webflow.com/5ad143610f7efd77b6f188f3/5f1879d9b294e0f3759d74f5_Barack_Obama_and_Shinzo_Abe_at_Sukyabashi_Jiro_April_2014.jpg">
+<meta property="twitter:description" content="<%= article_preview %>">
+
   <%= stylesheet_link_tag    'articles', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag Ckeditor.cdn_url  %>

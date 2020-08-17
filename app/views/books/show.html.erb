@@ -2,25 +2,27 @@
 <div class = "container">
 <div class = "row top-container">
 <div class = "col-md-3 book-pic">
-<%= image_tag  @book.thumb_image.url, width: 180, height: 280%>
+<%= image_tag  book_img(@book.thumb_image.url), width: 180, height: 280%>
 </div>
 <div class = "col-md-6">
-<h1><%= @book.title %></h1>
+<h1 id = "js-title"><%= @book.title %></h1>
     <div class = "blocking"><p style = "font-weight: bold; font-size: 20px">Author: &nbsp</p><p class = "author-2"><%= @book.author%></p>
   </div>
     <a href = "https://<%= buy(@book.buy_link) %>" target = "_blank" class = "buy">Read The Original </a>
       
   </div>
 </div>
-
 <p>
-
 </p>
-
 <p>
 <%= @book.body.html_safe %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) if logged_in?(:site_admin)  %> |
 <%= link_to 'Back', books_path %>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+    <%= javascript_include_tag 'jquery.min.js' %>
+    <%= javascript_include_tag 'jquery.socialfloating.js' %>
+<%= javascript_include_tag 'demo.js' %>
 </div>

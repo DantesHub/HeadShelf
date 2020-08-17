@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Articles | Brainstack</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="keywords" content="<%= @seo_keywords %>">
+  <%= stylesheet_link_tag    'articles', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag Ckeditor.cdn_url  %>
+
+
+</head>
+  <%= stylesheet_link_tag 'socialfloating.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+
+<body>
+  <div class="ui main text container">
+  <%= render 'shared/nav' %>
+  <%= yield %>
+  <%= source_helper %>
+  <%= alerts %>
+  <%= render 'shared/footer' %>
+  </div>
+</body>
+
+</html>

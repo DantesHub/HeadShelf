@@ -10,6 +10,10 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w[books.css]
 Rails.application.config.assets.precompile += %w[titans.css]
 Rails.application.config.assets.precompile += %w[ckeditor/config.js]
+Rails.application.config.assets.precompile += %w[socialfloating.css]
+Rails.application.config.assets.precompile += %w[jquery.min.js]
+Rails.application.config.assets.precompile += %w[jquery.socialfloating.js]
+Rails.application.config.assets.precompile += %w[demo.js]
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets

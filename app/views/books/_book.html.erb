@@ -1,10 +1,17 @@
-    <tr>
-    <td><%= book.tag_list %><td>
-      <td><%= book.title %></td>
-      <td><%= book.author %></td>
-      <td><%= link_to  book.status, toggle_status_book_path(book) if logged_in?(:site_admin)  %></td>
-      <td><%= book.body %></td>
-      <td><%= link_to 'Show', book %></td>
-      <td><%= link_to 'Edit', edit_book_path(book) if logged_in?(:site_admin)  %></td>
-      <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }  if logged_in?(:site_admin) %></td>
-    </tr>
+    <div class = "book">
+        <div>
+            <%= link_to book  do%><%= image_tag  book_img(book.thumb_image.url), height: 200, width: 130%><% end %>
+        </div>
+        <div class = "text">
+                       <%= link_to  book.status, toggle_status_book_path(book) if logged_in?(:site_admin) %>
+         <%= link_to fa_icon('pencil-square-o'), edit_book_path(book) if logged_in?(:site_admin)  %>
+         <%= link_to fa_icon('trash'), book, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)  %>
+           <div class = "title"><%= link_to book  do%><%= book.title %><% end %></div>
+          <div class = "author"><%= book.author %></div>       
+          <div><%= book.tag_list %></div>
+          <p class = "preview-text"><%= book.preview.truncate(190,separator: '.').html_safe %>
+           </p>
+
+          </div>
+  
+   </div>

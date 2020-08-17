@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "gritter";
+@import "font-awesome";
 /* stylelint-disable selector-list-comma-newline-after */
 .categories {
 
@@ -205,7 +206,7 @@ a:hover {
 }
 
 .container {
-  max-width: 850px;
+  max-width: 900px;
 }
 .blog-post-title {
   font-size: 2rem;
@@ -228,3 +229,28 @@ p {
 .container-show {
   max-width: 750px;
 }
+
+.articlecrumb a {
+  font-size: 1em;
+  margin: 0px 10px 0px 10px;
+}
+
+.thelinks li a{
+  font-size: 18px;
+  margin: 0px 10px 0px 10px
+}
+
+ .blocking {
+   display:flex;
+   justify-content: center;
+     margin-bottom: -10px;
+ }
+
+ .author {
+   font-weight: bold;
+   font-style: italic;
+ }
+ .twitter {
+   font-size: 20px;
+   color :#379CEC;
+ }

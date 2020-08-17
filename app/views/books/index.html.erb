@@ -1,23 +1,34 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Books</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Status</th>
-      <th>Body</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%= render @books %>
-  </tbody>
-</table>
-
+<div class = "container">
+<%= render 'shared/article_jumbotron' %>
+<div class="w-clearfix w-dyn-items container">
+      <div  role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path %>" data-remote="true">ALL</a></div>
+      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "finance") %>" data-remote="true">Finance</a></div>
+      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "science") %>" data-remote="true">Science</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "technology") %>" data-remote="true">Technology</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "biography") %>" data-remote="true">Biography</a></div>
+              <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "philosophy") %> " data-remote="true">Philosophy</a></div>
+              <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "fiction") %>"  data-remote="true">Fiction</a></div>
+              <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "communication") %>" data-remote="true">Communication</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "history") %>"  data-remote="true">History</a></div>
+            <div role="listitem" class="filter-item w-dyn-item" id = "category-item"> 
+            <%= link_to "Creativity",  books_path(:category => "creativity"), remote: true, class: "p-2 text-muted"%></div>
+               <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "career") %>"  data-remote="true">Career/Work</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "health") %>"  data-remote="true">Health</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "self-improvement") %>"  data-remote="true">Self-Improvement</a></div>
+            <div role="listitem" class="filter-item w-dyn-item">  <a class="p-2 text-muted" href="<%= books_path(:category => "entrepreneurship") %>"  data-remote="true">Entrepreneurship</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "productivity") %>"  data-remote="true">Productivity</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "psychology") %>"  data-remote="true">Psychology</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "marketing") %>"  data-remote="true">Marketing</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "leadership") %>"  data-remote="true">Leadership</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "mindfulness") %>"  data-remote="true">Mindfulness</a></div>
+            <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "learning") %>"  data-remote="true">Learning</a></div>
+          </div>
+<h1 id = "our-notes">Our Notes</h1>
+<div class = "create-note"><%= link_to 'Create New Book note', new_book_path if logged_in?(:site_admin) %></div>
 <br>
-
-<%= link_to 'New Book', new_book_path if logged_in?(:site_admin) %>
+<div class = "grid" id = "books">
+      <%= render @books %>
+      </div>
+<br>
+</div>

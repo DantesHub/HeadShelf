@@ -1,2 +1,113 @@
 @import "bootstrap";
 @import "gritter";
+@import "font-awesome";
+
+.container {
+  max-width: 850px;
+}
+
+.btn {
+  background-color: black;
+  border-color: black;
+}
+
+.book {
+  margin: 0rem 0rem 0rem 0rem;
+  display: flex;
+}
+.jumbotron {
+  padding: 0;
+}
+
+.grid {
+   display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-column-gap: 65px; 
+  grid-row-gap: 2rem; 
+}
+
+.text {
+  margin-left: 1rem;
+}
+ .w-dyn-list {
+   display: block;
+ }
+
+ .w-clearfix{
+   display: table; 
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+ }
+
+ .filter-item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    float: left;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+ }
+ .filter-item a {
+    text-decoration: none;
+ }
+
+ .preview-text {
+   font-size: 13px;
+ }
+ a {
+   color: black;
+ }
+ a:hover {
+   color: black;
+ }
+
+
+ .create-note a {
+   color: blue;
+ }
+
+ .title {
+   font-weight: bold;
+ }
+
+ .author {
+   font-style: italic;
+ }
+
+ .author-2 {
+      font-style: italic;
+   font-size: 20px;
+
+ }
+
+ .top-container {
+   display: flex;
+   justify-content: center;
+ }
+
+ .blocking {
+   display:flex;
+     margin-bottom: -10px;
+ }
+
+ .book-pic {
+   margin-right: 0.5rem;
+   margin-left: 4.5rem;
+ }
+
+.buy {
+color: #2A7FB7;
+font-size: 20px;
+font-weight: bold;
+}
+
+.blog-footer {
+  padding: 2rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}

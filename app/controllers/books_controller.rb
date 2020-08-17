@@ -5,11 +5,20 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = if logged_in?(:site_admin)
-               Book.recent.all
-             else
-               Book.recent.published
+    @books = if !logged_in?(:site_admin)
+               if !params[:category].nil?
+                 Book.category(params[:category]).recent.published
+                 redirect_to articles_path
+               else
+                 Book.recent.published
              end
+             else
+               if !params[:category].nil?
+                 Book.category(params[:category]).recent.all
+               else
+                 Book.recent.all
+         end
+                    end
     @page_title = 'BrainStack | Books'
   end
 
@@ -85,6 +94,6 @@ end
 
   # Only allow a list of trusted parameters through.
   def book_params
-    params.require(:book).permit(:title, :author, :body, :tag_list)
+    params.require(:book).permit(:title, :author, :body, :thumb_image, :tag_list, :buy_link, :preview)
   end
 end

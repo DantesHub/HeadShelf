@@ -16,4 +16,7 @@ Rails.application.routes.draw do
     end
   end
   root to: 'books#index'
+  devise_scope :user do
+    get '55/logout', to: 'devise/sessions#destroy'
+  end
 end

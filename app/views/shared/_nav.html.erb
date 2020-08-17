@@ -1,10 +1,39 @@
-  <div class="container py-3">
+  <%
+=begin%>
+ <div class="container py-3">
+      <div class = "nav nav-masthead  logo float-left">
+      <h2 style = "margin-top: 10px">Brainstack</h2>
+    </div>
     <div class="masthead clearfix row float-right">
-      <nav class="nav nav-masthead float-right">
-        <div><%= link_to "Books", root_path, class: 'nav-link' %></div>
-        <div><%= link_to "Titans",titans_path, class: 'nav-link'%></div>
-        <div><%= link_to "Articles", articles_path, class: 'nav-link' %></div>
-        <%= login_helper %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class = "nav-item"><%= link_to "Books", root_path, class: 'nav-link' %></div>
+        <li class = "nav-item"><%= link_to "Titans",titans_path, class: 'nav-link'%></div>
+        <li class = "nav-item"><%= link_to "Articles", articles_path, class: 'nav-link' %></div>
+        </ul>
+        <!-- <%= login_helper %> -->
       </nav>
     </div>
+  </div> 
+<%
+=end%>
+<nav class="navbar navbar-expand-lg navbar-light container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#"><%= image_tag  "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/11/BRAINSTACK_1_.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIEI2OU6JGYQVMPQA%2F20200815%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20200815T172405Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=ca62e1ee419e8b1e591206d6c2850e37c28952019ff524ac3b5ef40172497c17" , width: 250, height: 50%></a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    
+    </ul>
+          <ul class="navbar-nav thelinks" style = "margin-right: 0">
+        <li class = "nav-item"><%= link_to "Books", root_path, class: 'nav-link' %></li>
+        <li class = "nav-item"><%= link_to "Titans",titans_path, class: 'nav-link'%></li>
+        <li class = "nav-item"><%= link_to "Articles", articles_path, class: 'nav-link' %></li>
+        <li class = "nav-item"><%= link_to "Newsletter", articles_path, class: 'nav-link' %></li>
+
+        </ul>
   </div>
+</nav>

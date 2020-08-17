@@ -12,15 +12,26 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag Ckeditor.cdn_url
  %>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
+
 </head>
+  <%= stylesheet_link_tag 'socialfloating.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 
 <body>
+  <div class="ui main text container">
   <%= render 'shared/nav' %>
-  <br>
   <%= yield %>
   <%= source_helper %>
   <%= alerts %>
   <%= render 'shared/footer' %>
+  </div>
+  
+    <%= javascript_include_tag 'jquery.min.js' %>
+    <%= javascript_include_tag 'jquery.socialfloating.js' %>
+        <%= javascript_include_tag 'demo.js' %>
 </body>
 
 </html>

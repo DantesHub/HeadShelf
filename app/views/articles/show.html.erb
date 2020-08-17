@@ -1,11 +1,18 @@
 <div class="container-show container site-inner">
-  <p id="notice"><%= notice %></p>
+  <%
+=begin%>
+ <p id="notice"><%= notice %></p> 
+<%
+=end%>
 
-  <h2 class="entry-title ">
+  <h1 class="entry-title ">
     <%= @article.title %>
-  </h2>
-  <p class="blog-post-meta">Published <%= @article.created_at.strftime("%B %d, %Y") %> </p>
-
+  </h1>
+  <div class = "blocking">
+  <p class = "author">By <%= @article.author %>&nbsp</p>
+  <%= link_to fa_icon('twitter'), @article.twitter, class: 'twitter', target: :_blank if !@article.twitter.nil? %>&nbsp| 
+  <p class="blog-post-meta">&nbsp Published <%= @article.created_at.strftime("%B %d, %Y") %> </p>
+</div>
   <p>
     <%=  @article.body.html_safe %>
   </p>

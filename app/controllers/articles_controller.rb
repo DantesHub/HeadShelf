@@ -22,7 +22,16 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   # GET /articles/1.json
-  def show; end
+  def show
+    if logged_in?(:site_admin) || @article.published?
+      @article_url = request.original_url
+      @article_image = @article.thumb_image
+      @article_preview = @article.preview
+      @article_page_title = @article.title
+    else
+      redirect_to books_path, notice: 'You are not authorized to access this page'
+  end
+  end
 
   # GET /articles/new
   def new

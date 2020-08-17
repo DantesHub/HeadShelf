@@ -27,6 +27,12 @@ $.socialfloating({
         color: "#811302",
       },
     ],
-    [{ icon: "envelope", enabled: !0, link: "mailto:contact@example.com" }],
+    [
+      {
+        icon: "envelope",
+        enabled: !0,
+        link: `mailto:?&subject=&body=${window.location.href}`,
+      },
+    ],
   ],
 });

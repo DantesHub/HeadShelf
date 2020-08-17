@@ -27,6 +27,9 @@ class BooksController < ApplicationController
   def show
     if logged_in?(:site_admin) || @book.published?
       @page_title = @book.title
+      @books_preview = @book.preview
+      @books_image = @book.thumb_image
+      @books_url = request.original_url
     else
       redirect_to books_path, notice: 'You are not authorized to access this page'
   end

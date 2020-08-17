@@ -42,7 +42,7 @@ puts '10 books created'
 
 10.times do |article|
   Article.create!(
-    title: "New Article #{article}",
+    title: "New Article ",
     author: 'Dante',
     twitter: 'https://twitter.com/d4nteslife',
     preview: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum ',

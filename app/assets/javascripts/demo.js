@@ -36,3 +36,4 @@ $.socialfloating({
     ],
   ],
 });
+console.log(`fasdfadsfasdfsdafasdfsdafsdafsdaf${window.location.href}`);

@@ -10,11 +10,13 @@
       showHideButton: true,
       container: "socialfloating",
       position: "left",
-      buttons: {},
+      buttons: {}
     };
 
     var settings = $.extend({}, defaults, options);
-
+   var title = $('#js-title').text()
+    console.log("bing")
+   console.log(title);
     var container = $("#" + settings.container);
 
     if (container.length === 0) {

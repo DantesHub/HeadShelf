@@ -20,5 +20,4 @@
 //= require cocoon
 //= require turbolinks
 //= require gritter
-//= = require social-share-button
 //= require_tree .

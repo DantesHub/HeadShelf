@@ -1,17 +1,8 @@
 <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
-    <%= javascript_include_tag 'jquery.min.js' %>
-    <%= javascript_include_tag 'jquery.socialfloating.js' %>
-<%= javascript_include_tag 'demo.js' %>
+
 <div class="container-show container site-inner">
-  <%
-=begin%>
- <p id="notice"><%= notice %></p> 
-<%
-=end%>
 
-  <h1 class="entry-title ">
-  <%= social_share_button_tag(@article.title) %>
-
+  <h1 class="entry-title"  id = "js-title" >
     <%= @article.title %>
   </h1>
   <div class = "blocking">
@@ -22,6 +13,8 @@
   <p>
     <%=  @article.body.html_safe %>
   </p>
-
+    <%= javascript_include_tag 'jquery.min.js' %>
+    <%= javascript_include_tag 'jquery.socialfloating.js' %>
+<%= javascript_include_tag 'demo.js' %>
   <%= link_to 'Back', articles_path %>
 </div>

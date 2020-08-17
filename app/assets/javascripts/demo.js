@@ -1,3 +1,5 @@
+
+var title = document.getElementById("js-title").textContent
 $.socialfloating({
   icons: "fontawesome5",
   buttons: [
@@ -11,13 +13,13 @@ $.socialfloating({
       {
         icon: "twitter",
         enabled: !0,
-        link: `https://twitter.com/intent/tweet?url=${window.location.href}`,
+        link: `https://twitter.com/intent/tweet?url=${window.location.href}&text=${title}`,
         color: "#00aced",
       },
       {
         icon: "linkedin",
         enabled: !0,
-        link: `https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}&title=&summary=&source=`,
+        link: `https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}&title=${title}&summary=&source=brainstack`,
         color: "#2774B0",
       },
       {

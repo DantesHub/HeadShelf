@@ -1,7 +1,7 @@
 <div class="container titan-container" style="margin-top: 2rem; margin-bottom: 2rem; ">
   <div class="row">
     <div class="col-lg-7">
-      <%= image_tag titan_img(@titan.main_image.url, 'main'), width: '100%' %>
+      <%= image_tag titan_img(@titan.main_image.to_s, 'main'), width: '100%' %>
     </div>
     <div class="col-lg-5 ">
       <h1><%= @titan.name %></h1>

@@ -1,4 +1,5 @@
 class Titan < ApplicationRecord
+  has_many :titan_books
   extend FriendlyId
   friendly_id :name, use: :slugged
   mount_uploader :thumb_image, TitanUploader

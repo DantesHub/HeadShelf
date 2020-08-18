@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_201110) do
+ActiveRecord::Schema.define(version: 2020_08_18_191140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,6 +92,15 @@ ActiveRecord::Schema.define(version: 2020_08_17_201110) do
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
+  create_table "titan_books", force: :cascade do |t|
+    t.string "name"
+    t.string "link"
+    t.bigint "titan_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["titan_id"], name: "index_titan_books_on_titan_id"
+  end
+
   create_table "titans", force: :cascade do |t|
     t.string "name"
     t.text "body"
@@ -125,4 +134,5 @@ ActiveRecord::Schema.define(version: 2020_08_17_201110) do
   end
 
   add_foreign_key "taggings", "tags"
+  add_foreign_key "titan_books", "titans"
 end

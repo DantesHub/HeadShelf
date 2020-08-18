@@ -76,3 +76,55 @@ footer p {
   background-color: black;
   border-color: black;
 }
+
+.box-image {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  opacity: 1;
+
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.box-image:hover .image {
+  opacity: 0.3;
+}
+
+.box-image:hover .middle {
+  opacity: 1;
+}
+
+.text:hover {
+    background: black;
+    color: white;
+    border-color: black;
+}
+
+.text {
+    border-radius: 25px;
+    display: inline-block;
+    padding: 14px 28px 13px 28px;
+    line-height: 1;
+    border: 2px solid black;
+    font-family: "Raleway", "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+

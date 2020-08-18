@@ -40,9 +40,9 @@ end
 end
 puts '10 books created'
 
-10.times do |article|
+10.times do |_article|
   Article.create!(
-    title: "New Article ",
+    title: 'New Article ',
     author: 'Dante',
     twitter: 'https://twitter.com/d4nteslife',
     preview: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum ',
@@ -71,3 +71,11 @@ end
 end
 
 puts '9 titans items created'
+
+3.times do |_titan_book|
+  TitanBook.create!(
+    name: 'Peak',
+    link: 'google.com',
+    titan_id: Titan.last.id
+  )
+end

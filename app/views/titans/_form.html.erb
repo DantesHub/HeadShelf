@@ -12,9 +12,19 @@
 
   <div class="form-group">
     <%= form.label :body %>
-    <%= form.text_area :body, class: 'form-control', rows: 20%>
+    <%= form.text_area :body, class: 'form-control', rows: 10%>
   </div>
 
+
+    <h2>Their Bookshelf</h2>
+    <div>
+    <%= form.fields_for :titan_books do |titanbook_form|  %>
+      <%= render 'titan_book_fields', f: titanbook_form %>
+    <% end %>
+    <div>
+     <%= link_to_add_association 'Add Book', form, :titan_books %>
+    </div>
+</div>
   <div class="form-group">
     <label class="btn btn-primary">
       Upload Main Image File

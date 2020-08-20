@@ -18,7 +18,10 @@ padding-bottom: var(--jumbotron-padding-y);
   }
 }
 
-
+.never {
+  display: flex;
+  align-items: center;
+}
 .titan {
   margin: 20px;
 }
@@ -112,6 +115,17 @@ footer p {
     background: black;
     color: white;
     border-color: black;
+}
+
+.grid {
+   display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-column-gap: 30px; 
+  grid-row-gap: 2rem; 
+}
+.book {
+  margin: 1rem 1rem 1rem 1rem;
+  display: flex;
 }
 
 .text {

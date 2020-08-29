@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get '/newsletter', to: 'pages#newsletter'
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
+
   resources :titans do
     put :sort, on: :collection
   end
@@ -9,7 +11,6 @@ Rails.application.routes.draw do
       get :toggle_status
     end
   end
-  resources :titans
   resources :books do
     member do
       get :toggle_status

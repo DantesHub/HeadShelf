@@ -2,12 +2,11 @@
 @import "jquery-ui";
 @import "gritter";
 :root {
-  --jumbotron-padding-y: 3rem;
+  --jumbotron-padding-y: 1.4rem;
 }
 
 .jumbotron {
-  padding-top: var(--jumbotron-padding-y);
-padding-bottom: var(--jumbotron-padding-y);
+ padding-top: 10px;
   margin-bottom: 0;
   background-color: #fff;
 }
@@ -16,6 +15,10 @@ padding-bottom: var(--jumbotron-padding-y);
     padding-top: calc(var(--jumbotron-padding-y) * 2);
     padding-bottom: calc(var(--jumbotron-padding-y) * 2);
   }
+}
+
+.book-img {
+  max-width: 100%
 }
 
 .never {
@@ -70,6 +73,12 @@ footer p {
   padding-top: 30px;
 }
 
+.titan-header{
+  margin: auto;
+  display: flex;
+  max-width: 950px;
+}
+
 .btn {
   background-color: black;
   border-color: black;
@@ -116,6 +125,9 @@ footer p {
     color: white;
     border-color: black;
 }
+.mj {
+  padding-right: 1.5rem;
+}
 
 .grid {
    display: grid; 
@@ -142,3 +154,14 @@ footer p {
     color: black;
 }
 
+h1 {
+  font-size: 46px;
+    line-height: 1.25;
+    font-weight: bold;
+    color: rgb(17, 17, 17);
+    letter-spacing: -0.005em;
+}
+.subheading {
+    font-family: 'freight-display-pro,serif';
+    font-size: 25px;
+}

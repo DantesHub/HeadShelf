@@ -20,7 +20,9 @@
   <%= stylesheet_link_tag 'socialfloating.css', media: 'all', 'data-turbolinks-track': 'reload' %>
 <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
 <body class = "container">
+<header class = "book-header">
   <%= render "shared/nav" %>
+  </header>
   <%= yield %>
   <br>
   <%= source_helper %>

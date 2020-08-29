@@ -1,12 +1,13 @@
 CarrierWave.configure do |config|
   config.storage    = :aws
   config.aws_bucket = ENV.fetch('S3_BUCKET_NAME') # for AWS-side bucket access permissions config, see section below
-  config.aws_acl    = 'private'
+  config.aws_acl = :public_read
+  config.fog_public = true
   config.aws_authenticated_url_expiration = 60 * 60 * 24 * 7
   config.aws_attributes = lambda {
     {
-      expires: 1.week.from_now.httpdate,
-      cache_control: 'max-age=604800'
+      expires: 1.year.from_now.httpdate,
+      cache_control: 'max-age=315576000'
     }
   }
 

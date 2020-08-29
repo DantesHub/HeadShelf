@@ -1,5 +1,5 @@
 class TitansController < ApplicationController
-  before_action :set_titan, only: %i[show edit update destroy]
+  before_action :set_titan, only: %i[show edit update destroy toggle_status]
   skip_before_action :verify_authenticity_token
   access all: %i[show index], user: { except: %i[destroy new update edit sort] }, site_admin: :all
   layout 'titan'
@@ -25,7 +25,6 @@ class TitansController < ApplicationController
   # GET /titans/new
   def new
     @titan = Titan.new
-    
   end
 
   # GET /titans/1/edit
@@ -75,6 +74,6 @@ class TitansController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def titan_params
-    params.require(:titan).permit(:name, :body, :thumb_image, :main_image, titan_books_attributes: [:id, :name, :link, :_destroy])
+    params.require(:titan).permit(:name, :body, :thumb_image, :main_image, titan_books_attributes: %i[id name link _destroy])
   end
 end

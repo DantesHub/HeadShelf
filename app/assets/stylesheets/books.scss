@@ -3,12 +3,16 @@
 @import "font-awesome";
 
 .container {
-  max-width: 850px;
+  max-width: 950px;
 }
+
 
 .btn {
   background-color: black;
   border-color: black;
+}
+.mj {
+  padding-right: 1.5rem;
 }
 
 .book {
@@ -17,6 +21,14 @@
 }
 .jumbotron {
   padding: 0;
+  background-color: white;
+}
+.book-header {
+    display: block;
+    font-size: 18px;
+}
+.book-header .nav-item {
+  padding: 0.6rem;
 }
 
 .grid {
@@ -111,3 +123,4 @@ font-weight: bold;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
+

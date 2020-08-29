@@ -1,6 +1,6 @@
 
 <div class = "container">
-<%= render 'shared/article_jumbotron' %>
+<%= render partial: 'shared/article_jumbotron', locals: {image_link: "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/1/cover.jpeg"}%>
 <div class="w-clearfix w-dyn-items container">
       <div  role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path %>" data-remote="true">ALL</a></div>
       <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "finance") %>" data-remote="true">Finance</a></div>
@@ -24,7 +24,8 @@
             <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "mindfulness") %>"  data-remote="true">Mindfulness</a></div>
             <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "learning") %>"  data-remote="true">Learning</a></div>
           </div>
-<h1 id = "our-notes">Our Notes</h1>
+          <br>
+<h2 id = "our-notes">Our Notes</h2>
 <div class = "create-note"><%= link_to 'Create New Book note', new_book_path if logged_in?(:site_admin) %></div>
 <br>
 <div class = "grid" id = "books">

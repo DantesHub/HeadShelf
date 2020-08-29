@@ -13,10 +13,11 @@
     <!-- Custom styles for this template -->
       <%= stylesheet_link_tag    'titans', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   </head>
 
   <body class = "container">
-    <header>
+    <header class = "titan-header">
               <%= render 'shared/nav' %>
     </header>
   <%= yield %>

@@ -1,5 +1,5 @@
 <!-- TODO: hover over shows titans name -->
-<a href="/titans/<%= titan.id %>">
+ <%= link_to titan  do%>
   <div class="card mb-4 box-shadow titan" data-id="<%= titan.id %>">
   <div class = "box-image">
     <%= image_tag titan_img(titan.thumb_image.url, 'thumb'), class: 'image', width: '100%', width: 300, height: 300 %>
@@ -22,4 +22,4 @@
   </div>
   </div>
   </div>
-</a>
+<% end %>

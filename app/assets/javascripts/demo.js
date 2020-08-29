@@ -1,4 +1,10 @@
 var title = document.getElementById("js-title").textContent;
+var imageURL = document
+  .querySelector("meta[property='og:image']")
+  .getAttribute("content");
+var description = document
+  .querySelector("meta[property='og:description']")
+  .getAttribute("content");
 $.socialfloating({
   icons: "fontawesome5",
   buttons: [
@@ -24,7 +30,7 @@ $.socialfloating({
       {
         icon: "pinterest",
         enabled: !0,
-        link: `https://pinterest.com/pin/create/button/?url=${window.location.href}&media=&description=`,
+        link: `https://pinterest.com/pin/create/button/?url=${window.location.href}&media=${imageURL}&description=${description}`,
         color: "#811302",
       },
     ],
@@ -37,4 +43,3 @@ $.socialfloating({
     ],
   ],
 });
-console.log(`fasdfadsfasdfsdafasdfsdafsdafsdaf${window.location.href}`);

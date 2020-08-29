@@ -7,6 +7,15 @@
 }
 
 
+.jumbotron {
+       background-size: 900px 360px;
+
+  background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/1/cover.jpeg);
+    width: 900px;
+  height: 360px;
+  padding: 0;
+  background-color: white;
+}
 .btn {
   background-color: black;
   border-color: black;
@@ -123,4 +132,30 @@ font-weight: bold;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
+ @media (max-width: 800px) {
+   .jumbotron {
+     display: flex;
+     justify-content: center; 
+     margin: auto;
+     width: 500px;
+     height: 300px;
+     margin-bottom: 20px;
+    background-repeat: no-repeat;
+     background-size: 500px 300px;
+     background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/1/cover.jpeg);
+   }
+ }
+    @media (max-width: 500px) {
+   .jumbotron {
+         display: flex;
+     justify-content: center; 
+     margin: auto;
+     width: 300px;
+     height: 200px;
+     margin-bottom: 20px;
+    background-repeat: no-repeat;
+     background-size: 300px 200px;
+     background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/1/cover.jpeg);
+   }
+    }
 

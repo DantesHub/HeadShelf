@@ -3,9 +3,8 @@
 @import "font-awesome";
 
 /* stylelint-disable selector-list-comma-newline-after */
-.categories {
 
-}
+  
 .btn {
   background-color: black;
   border-color: black;
@@ -191,6 +190,10 @@ a:hover {
   margin: 0 auto;
 }
 .jumbotron {
+  width: 900px;
+  height: 360px;
+    background-size: 900px 360px;
+  background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/3/Messages_Image_742068698_.jpeg);
   padding: 0;
   background-color: white;
 }
@@ -262,3 +265,29 @@ p {
    font-size: 20px;
    color :#379CEC;
  }
+ @media (max-width: 800px) {
+   .jumbotron {
+     display: flex;
+     justify-content: center; 
+     margin: auto;
+     width: 500px;
+     height: 350px;
+     margin-bottom: 20px;
+    background-repeat: no-repeat;
+     background-size: 500px 350px;
+     background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan_book/name/2/blogperson.jpeg);
+   }
+ }
+    @media (max-width: 500px) {
+   .jumbotron {
+         display: flex;
+     justify-content: center; 
+     margin: auto;
+     width: 300px;
+     height: 160px;
+     margin-bottom: 20px;
+    background-repeat: no-repeat;
+     background-size: 300px 160px;
+     background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan_book/name/2/blogperson.jpeg);
+   }
+    }

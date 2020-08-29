@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title><%= @page_title %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Open Graph data -->
   <meta name="keywords" content="<%= @seo_keywords %>">
   <meta property="og:title" content="<%= @page_title %>" />
 <meta content="<%= @books_image %>" property="og:image">
@@ -14,11 +15,12 @@
 <meta property="og:url" content="<%= @books_url %>" />
 
   <%= stylesheet_link_tag 'books', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag Ckeditor.cdn_url
  %>
   <%= stylesheet_link_tag 'socialfloating.css', media: 'all', 'data-turbolinks-track': 'reload' %>
 <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
+</head>
 <body class = "container">
 <header class = "book-header">
   <%= render "shared/nav" %>

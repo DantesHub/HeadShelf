@@ -9,11 +9,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="<%= @seo_keywords %>">
 
-<!-- Open Graph data -->
-<meta property="og:type" content="article" />
-<meta property="og:url" content="<%=@article_url %>" />
-<meta property="og:site_name" content="Brainstack" />
-<meta property="og:image" content="<%= @article_image %>" />
+  <!-- Open Graph data -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="<%=@article_url %>" />
+  <meta property="og:site_name" content="Brainstack" />
+  <meta property="og:image" content="<%= @article_image %>" />
+  <!-- FIXED: Add meta title and description og tag -->
+  <meta content="<%= @article_page_title %>" property="og:title">
+  <meta content="<%= @article_preview %>" property="og:description">
+
+  <!-- FIXED: Add Twitter Meta Tags -->
+  <!-- Twitter Meta tags -->
+  <meta content="<%= @article_page_title %>" property="twitter:title">
+  <meta content="<%= @article_preview %>" property="twitter:description">
+  <meta content="<%= @article_image %>" property="twitter:image">
+  <meta content="summary_large_image" name="twitter:card">
 
   <%= stylesheet_link_tag    'articles', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -21,7 +31,6 @@
 <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
   <%= stylesheet_link_tag 'socialfloating.css', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
-
 
 
 <body>

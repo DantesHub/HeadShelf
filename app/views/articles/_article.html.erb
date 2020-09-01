@@ -23,7 +23,7 @@
        <!-- admin buttons -->
        <p class="blog-post-meta articlecrumb">
             <%= link_to  article.status, toggle_status_article_path(article) if logged_in?(:site_admin) %>/
-         <%= link_to fa_icon('pen-square'), edit_article_path(article) if logged_in?(:site_admin)  %>/
+         <%= link_to fa_icon('pencil-square'), edit_article_path(article) if logged_in?(:site_admin)  %>/
          <%= link_to fa_icon('trash'), article, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)  %>
        </p>
        <!-- admin buttons  end-->

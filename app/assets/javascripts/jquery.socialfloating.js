@@ -25,7 +25,7 @@
           settings.container +
           '" class="contact-bar ' +
           settings.position +
-          '">'
+          '" style = "width: 80px; height: 350px">'
       );
 
       container = $("#" + settings.container);
@@ -36,11 +36,11 @@
         switch (settings.position) {
           case "right":
             sShowHideButton =
-              '<a class="cb-link toggle-bar"><span class="fa fa-angle-right" aria-hidden="true"></span></a>';
+              '<a class="cb-link toggle-bar"><span class="fa fa-angle-right fa-lg" aria-hidden="true"></span></a>';
             break;
           default:
             sShowHideButton =
-              '<a class="cb-link toggle-bar"><span class="fa fa-angle-left" aria-hidden="true"></span></a>';
+              '<a class="cb-link toggle-bar"><span class="fa fa-angle-left fa-lg" aria-hidden="true"></span></a>';
             break;
         }
         container.append(sShowHideButton);
@@ -102,13 +102,13 @@
             case "fontawesome5":
               if (bs.icon == "envelope") {
                 sIcon =
-                  '<span class="fas fa-' +
+                  '<span class="ikon fa-lg fas fa-' +
                   bs.icon +
                   '" aria-hidden="true"></span>';
                 break;
               } else {
                 sIcon =
-                  '<span class="fab fa-' +
+                  '<span class="ikon fa-lg fab fa-' +
                   bs.icon +
                   '" aria-hidden="true"></span>';
                 break;
@@ -116,7 +116,7 @@
 
             default:
               sIcon =
-                '<span class="fab fa-' +
+                '<span class="ikon fa-lg fab fa-' +
                 bs.icon +
                 '" aria-hidden="true"></span>';
               break;

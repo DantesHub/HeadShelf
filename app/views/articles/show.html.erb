@@ -1,5 +1,4 @@
-
-
+<script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
 <div class="container-show container site-inner">
 
   <h1 class="entry-title"  id = "js-title" >
@@ -8,7 +7,12 @@
 
   <div class = "blocking">
   <p class = "author">By <%= @article.author %>&nbsp</p>
-  <%= link_to fa_icon('twitter'), @article.twitter, class: 'twitter', target: :_blank if !@article.twitter.nil? %>&nbsp| 
+  <% if !@article.twitter.nil?  %>
+  <%= link_to @article.twitter, target: :_blank  do %>
+      <i class = "fab fa-twitter fa-lg" class = "twitter"></i> 
+  <% end %>
+  <% end %>
+  &nbsp |
   <p class="blog-post-meta">&nbsp Published <%= @article.created_at.strftime("%B %d, %Y") %> </p>
 </div>
   <p>
@@ -17,5 +21,10 @@
     <%= javascript_include_tag 'jquery.min.js' %>
     <%= javascript_include_tag 'jquery.socialfloating.js' %>
 <%= javascript_include_tag 'demo.js' %>
-  <%= link_to 'Back', articles_path %>
+  <h3 style = "font-size: 20px;"><%= link_to 'Back to Articles', articles_path, class: 'article-a' %></h3>
+  <br>
+  <br>
+       <%= render partial: 'shared/newsform', locals: {showThis: false} %>
+<br>
+<br>
 </div>

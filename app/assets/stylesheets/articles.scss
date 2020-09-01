@@ -158,6 +158,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .25rem;
   font-size: 2.5rem;
 }
+.blog-post-title a {
+    color: black;
+}
 .blog-post-meta {
   display: flex; 
   justify-content: center;
@@ -169,19 +172,22 @@ h1, h2, h3, h4, h5, h6 {
  * Footer
  */
 .blog-footer {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   color: #999;
   text-align: center;
-  background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+.news-form {
+text-align: center;
+}
 
-a {
+.article-a {
   color: black;
 }
+
 a:hover {
   color:black;
 }
@@ -238,12 +244,13 @@ p {
 
 }
 .container-show {
-  max-width: 750px;
+  max-width: 850px;
 }
 
 .articlecrumb a {
   font-size: 1em;
   margin: 0px 10px 0px 10px;
+  color: black;
 }
 
 .thelinks li a{

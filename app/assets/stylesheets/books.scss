@@ -78,10 +78,16 @@
  .preview-text {
    font-size: 13px;
  }
- a {
+
+ a:hover {
    color: black;
  }
- a:hover {
+
+ .book-a {
+   color: black;
+ }
+
+ .text a {
    color: black;
  }
 
@@ -185,12 +191,14 @@ color: #2A7FB7;
 font-size: 20px;
 font-weight: bold;
 }
+.news-form {
+  text-align: center;
+}
 
 .blog-footer {
   padding: 2rem 0;
   color: #999;
   text-align: center;
-  background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
  @media (max-width: 800px) {

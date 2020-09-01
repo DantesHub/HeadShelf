@@ -13,5 +13,7 @@
     <%= image_tag "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/thumb_image/3/Messages_Image_1655286618_.jpeg", width: 450, height: 450 %>
     </div>
 </div>
-<%= render 'shared/newsform' %>
+     <%= render partial: 'shared/newsform', locals: {showThis: true} %>
+<br>
+<br>
 </div>

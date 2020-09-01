@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<br>
 <div class = "container">
 <div class = "row top-container box-out">
 <div class = "col-md-3">
@@ -20,12 +20,18 @@
 </div>
 <p>
 </p>
+<br>
 <p>
 <%= @book.body.html_safe %>
 </p>
 
+<h3>
 <%= link_to 'Edit', edit_book_path(@book) if logged_in?(:site_admin)  %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Back to All Books', books_path, class: 'book-a' %></h3>
+<br>
+  <br>
+       <%= render partial: 'shared/newsform', locals: {showThis: false} %>
+<br>
 
     <%= javascript_include_tag 'jquery.min.js' %>
     <%= javascript_include_tag 'jquery.socialfloating.js' %>

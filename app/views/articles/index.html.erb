@@ -14,6 +14,9 @@
       <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "productivity") %>" data-remote="true">Productivity</a></div>
       <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "marketing") %>" data-remote="true">Marketing</a></div>
      <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Systems</a></div>
+      <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Writing</a></div>
+      <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Motivation</a></div>
+      <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Career/Life</a></div>
   </div>
 <br>
 
@@ -26,6 +29,10 @@
 <div class = "container" id = "articles">
    <%= render @articles %>
  <%= paginate @articles %>
+ <br>
+     <%= render partial: 'shared/newsform', locals: {showThis: false} %>
+<br>
+<br>
  </div>
 
 

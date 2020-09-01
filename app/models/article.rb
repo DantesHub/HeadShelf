@@ -38,7 +38,13 @@ class Article < ApplicationRecord
       Article.tagged_with(%w[marketing], any: true).order('created_at DESC')
     elsif cat == 'systems'
       Article.tagged_with(%w[systems], any: true).order('created_at DESC')
-    else
+    elsif cat == 'writing'
+      Article.tagged_with(%w[writing], any: true).order('created_at DESC')    
+    elsif cat == 'motivation'
+      Article.tagged_with(%w[motivation], any: true).order('created_at DESC')
+    elsif cat == 'career/life'
+      Article.tagged_with(%w[motivation], any: true).order('created_at DESC')
+    else  
       order('created_at DESC')
     end
 end

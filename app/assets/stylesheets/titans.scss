@@ -97,8 +97,12 @@
   display: flex;
   align-items: center;
 }
+
 .titan {
   margin: 20px;
+}
+.m-top {
+  margin-top: 1rem;
 }
 .jumbotron p:last-child {
   margin-bottom: 0;
@@ -121,10 +125,9 @@ footer p {
   margin-bottom: .25rem;
 }
 .titan-footer {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   color: #999;
   text-align: center;
-  background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
 

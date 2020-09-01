@@ -11,14 +11,16 @@
   </div>
   <hr>
   <div>
-  <div class = "grid">
-   <% @titan.titan_books.each do |book| %>
-   <div class = "book">
-
- <%= image_tag  titan_img(book.name.to_s, 'thumb'), Cass: 'book-img', height: 350%> 
-       </div>
-   <% end %>
-   </div>
+  <div class = "">
+  <div class = "grid box-out">
+          <% @titan.titan_books.each do |book| %>
+              <div class = "book">
+                <%= link_to book.link, :target => "_blank" do %>
+                <%= image_tag  titan_img(book.name.to_s, 'thumb'), Cass: 'book-img', width: 220, height: 330%> 
+                <% end  %>
+              </div>
+          <% end %>
+     </div>
    </div>
   </div>
 </div>

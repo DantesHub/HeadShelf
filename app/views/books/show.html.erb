@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 <div class = "container">
-<div class = "row top-container">
-<div class = "col-md-3 book-pic">
-<%= image_tag  book_img(@book.thumb_image.url), width: 180, height: 280%>
+<div class = "row top-container box-out">
+<div class = "col-md-3">
+<div class = " book-pic book">
+  <a href = "https://<%= buy(@book.buy_link) %>" target = "_blank" class = "buy">
+  <%= image_tag  book_img(@book.thumb_image.url), class: "book-img", width: 180, height: 250%> 
+  </a>
+</div>
 </div>
 
 <div class = "col-md-6">

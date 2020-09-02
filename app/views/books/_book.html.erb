@@ -1,6 +1,6 @@
     <div class = "book-index">
         <div>
-            <%= link_to book  do%><%= image_tag  book_img(book.thumb_image.url), height: 200, width: 130%><% end %>
+            <%= link_to book  do%><%= image_tag  book_img(book.thumb_image.url), height: 200, width: 130, class: 'book-preview-img' %><% end %>
         </div>
         <div class = "text">
                        <%= link_to  book.status, toggle_status_book_path(book) if logged_in?(:site_admin) %>

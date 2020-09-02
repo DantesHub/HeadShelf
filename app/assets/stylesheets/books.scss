@@ -78,6 +78,18 @@
  .preview-text {
    font-size: 13px;
  }
+ .book-preview-img {
+       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
+ }
+
+ p {
+   margin-top: 0.2rem;
+   margin-bottom: 0.2rem;
+ }
+.special-br {
+  margin-top: -1.5rem;
+}
+
 
  a:hover {
    color: black;
@@ -122,8 +134,11 @@
 
 
  .book {
-   width: 180px;
-    height: 250px;
+   width: 230px;
+    height: 320px;
+    display: flex; 
+    margin: auto;
+    justify-content: center;
        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
     transition: all .3s ease-in-out;
     transform-origin: left center 0px;
@@ -165,6 +180,12 @@
     box-shadow: 1px 3px 2px 4px rgba(0,0,0,.1), 20px 0px 0 #EDD5BC;
     /* transform: scale(1.02); */
 }
+#js-title {
+  font-size: 3rem;
+}
+.blocking p {
+  font-size: 1.5rem;
+}
 
 .book:hover::after {
     content: " ";
@@ -188,7 +209,7 @@
 
 .buy {
 color: #2A7FB7;
-font-size: 20px;
+font-size: 1.5rem;
 font-weight: bold;
 }
 .news-form {

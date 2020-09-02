@@ -1,10 +1,10 @@
 <br>
 <div class = "container">
 <div class = "row top-container box-out">
-<div class = "col-md-3">
+<div class = "col-md-4">
 <div class = " book-pic book">
   <a href = "https://<%= buy(@book.buy_link) %>" target = "_blank" class = "buy">
-  <%= image_tag  book_img(@book.thumb_image.url), class: "book-img", width: 180, height: 250%> 
+  <%= image_tag  book_img(@book.thumb_image.url), class: "book-img", width: 230, height: 320%> 
   </a>
 </div>
 </div>
@@ -12,8 +12,9 @@
 <div class = "col-md-6">
 
 <h1 id = "js-title"><%= @book.title %></h1>
-    <div class = "blocking"><p style = "font-weight: bold; font-size: 20px">Author: &nbsp</p><p class = "author-2"><%= @book.author%></p>
+    <div class = "blocking"><p style = "font-weight: bold">Author: &nbsp</p><p class = "author-2"><%= @book.author%></p>
   </div>
+<p class = 'special-br'>&nbsp</p>
     <a href = "https://<%= buy(@book.buy_link) %>" target = "_blank" class = "buy">Read The Original </a>
       
   </div>

@@ -1,11 +1,11 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy toggle_status]
-  access all: %i[show new index], user: { except: %i[destroy] }, site_admin: :all
+  access all: %i[show new index], user: { except: %i[destroy] }, admin: :all, admin: :all
   layout 'article'
   # GET /articles
   # GET /articles.json
   def index
-    @articles = if !logged_in?(:site_admin)
+    @articles = if !logged_in?(:site_admin) &&  !logged_in?(:admin)
                   if !params[:category].nil?
                     Article.page(params[:page]).per(5).category(params[:category]).recent.published
                   else

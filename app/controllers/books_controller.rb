@@ -1,12 +1,12 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[show edit update destroy toggle_status]
-  access all: %i[show index], user: { except: %i[destroy new update edit] }, site_admin: :all
+  access all: %i[show index], user: { except: %i[destroy new update edit] }, site_admin: :all, admin: :all
   layout 'book'
   # GET /books
   # GET /books.json
   def index
-    @books = if !logged_in?(:site_admin)
-               if !params[:category].nil?
+    @books = if !logged_in?(:site_admin) && !logged_in?(:admin)                  
+            if !params[:category].nil?
                  Book.category(params[:category]).recent.published
                  redirect_to articles_path
                else
@@ -17,8 +17,8 @@ class BooksController < ApplicationController
                  Book.category(params[:category]).recent.all
                else
                  Book.recent.all
-         end
-                    end
+             end
+    end
     @page_title = 'BrainStack | Book Notes'
     @seo_keywords = 'book notes, book summaries'
     @books_preview = 'Book notes and summaries to help you remember and understand what you read'

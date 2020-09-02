@@ -19,7 +19,11 @@ class BooksController < ApplicationController
                  Book.recent.all
          end
                     end
-    @page_title = 'BrainStack | Books'
+    @page_title = 'BrainStack | Book Notes'
+    @seo_keywords = 'book notes, book summaries'
+    @books_preview = 'Book notes and summaries to help you remember and understand what you read'
+    @books_url = request.original_url
+
   end
 
   # GET /books/1
@@ -30,6 +34,8 @@ class BooksController < ApplicationController
       @books_preview = @book.preview
       @books_image = @book.thumb_image
       @books_url = request.original_url
+      @book_categories = @book.tag_list
+      @seo_keywords = @book.title
     else
       redirect_to books_path, notice: 'You are not authorized to access this page'
   end
@@ -97,6 +103,6 @@ end
 
   # Only allow a list of trusted parameters through.
   def book_params
-    params.require(:book).permit(:title, :author, :body, :thumb_image, :tag_list, :buy_link, :preview)
+    params.require(:book).permit(:title, :author, :body, :thumb_image, :tag_list, :buy_link, :preview, :status)
   end
 end

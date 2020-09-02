@@ -1,7 +1,7 @@
-<div class="container titan-container" style="margin-top: 2rem; margin-bottom: 2rem; ">
+<div class="container titan-container" style="margin-top: 0rem; margin-bottom: 2rem; ">
      <%= link_to "EDIT", edit_titan_path(@titan) if logged_in?(:site_admin)  %>
   <div class="row">
-    <div class="col-lg-7 m-top">
+    <div class="col-lg-7">
       <%= image_tag titan_img(@titan.main_image.to_s, 'main'), width: '100%', height: 300%>
     </div>
     <div class="col-lg-5 ">

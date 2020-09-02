@@ -3,13 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <meta name="description" content="Book recommendations from industy's Titans. People ranging from Elon Musk to Seth Godin.">
+    <link rel="icon" href="https://brainstack.s3.us-east-2.amazonaws.com/uploads/brainstack+logo.png">
 
-    <title>Titan</title>
+<!-- Open Graph data -->
+  <meta property="og:title" content="<%= @page_title %>" >
+    <meta name="keywords" content="<%= @seo_keywords %>,<%= @page_title %>">
+<meta description="description" content="<%= @titan_preview %>">
+  <meta content="<%= @titan_image %>" property="og:image">
+  <meta content="<%= @titan_preview %>" property="og:description">
+  <!-- FIXED: Add meta url and site name og tag -->
+  <meta property="og:url" content="<%= @titan_url %>" />
+  <meta property="og:site_name" content="Brainstack" />
+  <meta property="og:type" content="website">
+
+
+  <!-- FIXED: Add Twitter Meta Tags -->
+  <!-- Twitter Meta tags -->
+  <meta content="<%= @page_title %>" property="twitter:title">
+  <meta content="<%= @titan_preview %>" property="twitter:description">
+  <meta content="<%= @titan_image %>" property="twitter:image">
+  <meta content="summary_large_image" name="twitter:card">
+    <title><%= @page_title %></title>
   <meta name="keywords" content="<%= @seo_keywords %>">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- Custom styles for this template -->
       <%= stylesheet_link_tag    'titans', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

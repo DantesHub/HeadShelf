@@ -187,6 +187,9 @@ text-align: center;
 .article-a {
   color: black;
 }
+.cats {
+ margin-left: 3.5rem;
+   }
 
 a:hover {
   color:black;
@@ -277,12 +280,15 @@ p {
      display: flex;
      justify-content: center; 
      margin: auto;
-     width: 500px;
-     height: 350px;
+     width: 600px;
+     height: 300px;
      margin-bottom: 20px;
     background-repeat: no-repeat;
-     background-size: 500px 350px;
-     background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan_book/name/2/blogperson.jpeg);
+     background-size: 600px 300px;
+     background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/3/Messages_Image_742068698_.jpeg);
+   }
+   .cats {
+ margin-left: 1rem;
    }
  }
     @media (max-width: 500px) {
@@ -291,10 +297,13 @@ p {
      justify-content: center; 
      margin: auto;
      width: 300px;
-     height: 160px;
+     height: 200px;
      margin-bottom: 20px;
     background-repeat: no-repeat;
-     background-size: 300px 160px;
-     background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan_book/name/2/blogperson.jpeg);
+     background-size: 300px 200px;
+     background-image: url(https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/blogman.png);
+   }
+   .cats {
+ margin-left: 0rem;
    }
     }

@@ -8,6 +8,8 @@ class TitansController < ApplicationController
   # GET /titans.json
   def index
     @titans = Titan.by_position
+    @seo_keywords = "books successful people read, elon musk, warren buffet, mark zuckerberg, success"
+    @page_title = 'BrainStack | Titans'
   end
 
   def sort
@@ -20,7 +22,11 @@ class TitansController < ApplicationController
 
   # GET /titans/1
   # GET /titans/1.json
-  def show; end
+  def show
+   @titan_image = @titan.thumb_image
+   @page_title = @titan.name
+   @titan_preview = @titan.body
+  end
 
   # GET /titans/new
   def new

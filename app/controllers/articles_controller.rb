@@ -18,6 +18,9 @@ class ArticlesController < ApplicationController
                     Article.page(params[:page]).per(5).recent.all
              end
           end
+          @seo_keywords = "brainstack, articles, knowledge, productivity, entrepreneurship"
+          @article_preview  = "Articles on creativity, entrepreneurship, productivity, finance, technology and so much more. "
+          @article_url = request.original_url
   end
 
   # GET /articles/1
@@ -27,7 +30,9 @@ class ArticlesController < ApplicationController
       @article_url = request.original_url
       @article_image = @article.thumb_image
       @article_preview = @article.preview
+      @seo_keywords = @article.title
       @article_page_title = @article.title
+      @article_categories = @article.tag_list
     else
       redirect_to books_path, notice: 'You are not authorized to access this page'
   end

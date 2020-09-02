@@ -3,7 +3,7 @@
 <div class="container" id = "bing">
 
 <%= render partial: 'shared/article_jumbotron', locals: {image_link: "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/3/Messages_Image_742068698_.jpeg"}%>
-<div class="w-clearfix w-dyn-items container">
+<div class="w-clearfix w-dyn-items container cats">
       <div  role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path %>" data-remote="true">ALL</a></div>
       <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "finance") %>" data-remote="true">Finance</a></div>
       <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "science") %>" data-remote="true">Science</a></div>
@@ -17,6 +17,7 @@
       <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Writing</a></div>
       <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Motivation</a></div>
       <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Career/Life</a></div>
+      <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Creativity</a></div>
   </div>
 <br>
 

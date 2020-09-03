@@ -80,6 +80,6 @@ class TitansController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def titan_params
-    params.require(:titan).permit(:name, :body, :thumb_image, :main_image, titan_books_attributes: %i[id name link _destroy])
+    params.require(:titan).permit(:name, :body, :thumb_image, :main_image, titan_books_attributes: [:id, :name, :link, :_destroy])
   end
 end

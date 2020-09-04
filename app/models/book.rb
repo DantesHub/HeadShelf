@@ -26,7 +26,7 @@ class Book < ApplicationRecord
     elsif cat == 'science'
       Book.tagged_with(%w[science], any: true).order('created_at DESC')
     elsif cat == 'career'
-      Book.tagged_with(%w[career], any: true).order('created_at DESC')
+      Book.tagged_with(%w[career/life], any: true).order('created_at DESC')
     elsif cat == 'creativity'
       Book.tagged_with(%w[creativity], any: true).order('created_at DESC')
     elsif cat == 'mindfulness'
@@ -61,6 +61,8 @@ class Book < ApplicationRecord
       Book.tagged_with(%w[marketing], any: true).order('created_at DESC')
     elsif cat == 'systems'
       Book.tagged_with(%w[systems], any: true).order('created_at DESC')
+    elsif cat == 'social science'
+      Book.tagged_with(%w[social science], any: true).order('created_at DESC')      
     else
       order('created_at DESC')
     end

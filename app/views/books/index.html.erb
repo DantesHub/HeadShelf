@@ -13,7 +13,7 @@
             <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "history") %>"  data-remote="true">History</a></div>
             <div role="listitem" class="filter-item w-dyn-item" id = "category-item"> 
             <%= link_to "Creativity",  books_path(:category => "creativity"), remote: true, class: "p-2 text-muted"%></div>
-               <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "career") %>"  data-remote="true">Career/Work</a></div>
+               <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "career/life") %>"  data-remote="true">Career/Life</a></div>
             <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "health") %>"  data-remote="true">Health</a></div>
             <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "self-improvement") %>"  data-remote="true">Self-Improvement</a></div>
             <div role="listitem" class="filter-item w-dyn-item">  <a class="p-2 text-muted" href="<%= books_path(:category => "entrepreneurship") %>"  data-remote="true">Entrepreneurship</a></div>
@@ -23,6 +23,7 @@
             <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "leadership") %>"  data-remote="true">Leadership</a></div>
             <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "mindfulness") %>"  data-remote="true">Mindfulness</a></div>
             <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "learning") %>"  data-remote="true">Learning</a></div>
+                        <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "social science") %>"  data-remote="true">Social Science</a></div>
           </div>
           <br>
 <h2 id = "our-notes">Our Notes</h2>

@@ -25,6 +25,8 @@ class Book < ApplicationRecord
       Book.tagged_with(%w[finance], any: true).order('created_at DESC')
     elsif cat == 'science'
       Book.tagged_with(%w[science], any: true).order('created_at DESC')
+    elsif cat == 'technology'
+      Book.tagged_with(%w[technology], any: true).order('created_at DESC')
     elsif cat == 'career'
       Book.tagged_with(%w[career/life], any: true).order('created_at DESC')
     elsif cat == 'creativity'

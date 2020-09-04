@@ -62,7 +62,9 @@ class Book < ApplicationRecord
     elsif cat == 'systems'
       Book.tagged_with(%w[systems], any: true).order('created_at DESC')
     elsif cat == 'social science'
-      Book.tagged_with(%w[social science], any: true).order('created_at DESC')      
+      Book.tagged_with(%w[social science], any: true).order('created_at DESC')     
+    elsif cat == 'success'
+      Book.tagged_with(%w[success], any: true).order('created_at DESC')    
     else
       order('created_at DESC')
     end

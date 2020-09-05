@@ -8,7 +8,8 @@
   <div class = "blocking">
   <p class = "author">By <%= @article.author %>&nbsp</p>
   <% if !@article.twitter.nil?  %>
-  <%= link_to @article.twitter, target: :_blank  do %>
+  <%= link_to @article.twitter, target: :_blank, class: "pad-2"  do %>
+
       <i class = "fab fa-twitter fa-lg" class = "twitter"></i> 
   <% end %>
   <% end %>

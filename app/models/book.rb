@@ -27,7 +27,7 @@ class Book < ApplicationRecord
       Book.tagged_with(%w[science], any: true).order('created_at DESC')
     elsif cat == 'technology'
       Book.tagged_with(%w[technology], any: true).order('created_at DESC')
-    elsif cat == 'career'
+    elsif cat == 'career/life'
       Book.tagged_with(%w[career/life], any: true).order('created_at DESC')
     elsif cat == 'creativity'
       Book.tagged_with(%w[creativity], any: true).order('created_at DESC')
@@ -45,6 +45,8 @@ class Book < ApplicationRecord
       Book.tagged_with(%w[leadership], any: true).order('created_at DESC')
     elsif cat == 'fiction'
       Book.tagged_with(%w[fiction], any: true).order('created_at DESC')
+    elsif cat == 'philosophy'
+      Book.tagged_with(%w[philosophy], any: true).order('created_at DESC')
     elsif cat == 'biography'
       Book.tagged_with(%w[biography], any: true).order('created_at DESC')
     elsif cat == 'health'

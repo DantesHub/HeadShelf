@@ -9,7 +9,9 @@
 li {
   margin-top: 1rem;
 }
-
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 .jumbotron {
        background-size: 900px 360px;
 

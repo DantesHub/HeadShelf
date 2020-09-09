@@ -1,4 +1,5 @@
 
+
 <div class = "newsletter">
 <div class = "row news-row">
 <div class = "col-lg-6 tweets">
@@ -10,10 +11,15 @@
 </div>
 </div>
     <div class = "col-lg-6 form-img subheader">
-    <%= image_tag "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/thumb_image/3/Messages_Image_1655286618_.jpeg", width: 450, height: 450 %>
+    <%= image_tag "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/thumb_image/3/Messages_Image_1655286618_.jpeg", width: 450, height: 450, class: 'hand' %>
     </div>
 </div>
+<div id = "newsform"">
      <%= render partial: 'shared/newsform', locals: {showThis: true} %>
+     </div>
 <br>
 <br>
 </div>
+<script>
+window.scrollBy(-100, 0);
+</script>

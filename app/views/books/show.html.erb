@@ -1,40 +1,42 @@
 <br>
-<div class = "container">
-<div class = "row top-container box-out">
-<div class = "col-md-4">
-<div class = " book-pic book">
-  <a href = "https://<%= buy(@book.buy_link) %>" target = "_blank" class = "buy">
-  <%= image_tag  book_img(@book.thumb_image.url), class: "book-img", width: 230, height: 320%> 
-  </a>
-</div>
-</div>
+<div class="container">
+  <div class="row top-container box-out">
+    <div class="col-md-4">
+      <div class=" book-pic book">
+        <a href="https://<%= buy(@book.buy_link) %>" target="_blank" class="buy">
+          <%= image_tag  book_img(@book.thumb_image.url), class: "book-img", alt: "#{@book.title} summary and notes", width: 200, height: 320%>
+        </a>
+      </div>
+    </div>
 
-<div class = "col-md-6">
+    <div class="col-md-6">
 
-<h1 id = "js-title"><%= @book.title %></h1>
-    <div class = "blocking"><p style = "font-weight: bold">Author: &nbsp</p><p class = "author-2"><%= @book.author%></p>
+      <h1 id="js-title"><%= @book.title %></h1>
+      <div class="blocking">
+        <p style="font-weight: bold">Author: &nbsp</p>
+        <p class="author-2"><%= @book.author%></p>
+      </div>
+      <p class='special-br'>&nbsp</p>
+      <a href="https://<%= buy(@book.buy_link) %>" target="_blank" class="buy">Read The Original </a>
+
+    </div>
   </div>
-<p class = 'special-br'>&nbsp</p>
-    <a href = "https://<%= buy(@book.buy_link) %>" target = "_blank" class = "buy">Read The Original </a>
-      
-  </div>
-</div>
-<p>
-</p>
-<br>
-<p>
-<%= @book.body.html_safe %>
-</p>
-
-<h3>
-<%= link_to 'Edit', edit_book_path(@book) if logged_in?(:site_admin)  %> |
-<%= link_to 'Back to All Books', books_path, class: 'book-a' %></h3>
-<br>
+  <p>
+  </p>
   <br>
-       <%= render partial: 'shared/newsform', locals: {showThis: false} %>
-<br>
+  <p>
+    <%= @book.body.html_safe %>
+  </p>
 
-    <%= javascript_include_tag 'jquery.min.js' %>
-    <%= javascript_include_tag 'jquery.socialfloating.js' %>
-<%= javascript_include_tag 'demo.js' %>
+  <h3>
+    <%= link_to 'Edit', edit_book_path(@book) if logged_in?(:site_admin)  %> |
+    <%= link_to 'Back to All Books', books_path, class: 'book-a' %></h3>
+  <br>
+  <br>
+  <%= render partial: 'shared/newsform', locals: {showThis: false} %>
+  <br>
+
+  <%= javascript_include_tag 'jquery.min.js' %>
+  <%= javascript_include_tag 'jquery.socialfloating.js' %>
+  <%= javascript_include_tag 'demo.js' %>
 </div>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get '/newsletter', to: 'pages#newsletter'
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users, path: '', path_names: { sign_in: '32/login', sign_out: 'logout', sign_up: '22/register' }
-
+#32login
   resources :titans do
     put :sort, on: :collection
   end

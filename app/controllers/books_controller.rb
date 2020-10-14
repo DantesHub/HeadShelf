@@ -19,9 +19,9 @@ class BooksController < ApplicationController
                  Book.recent.all
              end
     end
-    @page_title = 'BrainStack | Book Notes'
+    @page_title = 'BrainStack | Book '
     @seo_keywords = 'book notes, book summaries'
-    @books_preview = 'Book notes and summaries to help you remember and understand what you read'
+    @books_preview = 'Timeless knowledge, advice and wisdom to help you become better than you were yesterday. Book notes and summaries to help you remember and understand what you read'
     @books_url = request.original_url
 
   end

@@ -1,0 +1,308 @@
+
+app/uploaders/titan_book_uploader.rb,158
+class TitanBookUploader < CarrierWave::Uploader::BaseTitanBookUploader1,0
+  def store_dirstore_dir12,0
+  def extension_whitelistextension_whitelist18,0
+
+app/uploaders/titan_uploader.rb,150
+class TitanUploader < CarrierWave::Uploader::BaseTitanUploader1,0
+  def store_dirstore_dir12,0
+  def extension_whitelistextension_whitelist38,0
+
+app/uploaders/article_uploader.rb,154
+class ArticleUploader < CarrierWave::Uploader::BaseArticleUploader1,0
+  def store_dirstore_dir12,0
+  def extension_whitelistextension_whitelist16,0
+
+app/uploaders/ckeditor_picture_uploader.rb,172
+class CkeditorPictureUploader < CarrierWave::Uploader::BaseCkeditorPictureUploader3,0
+  def store_dirstore_dir16,0
+  def extension_white_listextension_white_list43,0
+
+app/uploaders/book_uploader.rb,147
+class BookUploader < CarrierWave::Uploader::BaseBookUploader1,0
+  def store_dirstore_dir8,0
+  def extension_whitelistextension_whitelist12,0
+
+app/uploaders/ckeditor_attachment_file_uploader.rb,186
+class CkeditorAttachmentFileUploader < CarrierWave::Uploader::BaseCkeditorAttachmentFileUploader5,0
+  def store_dirstore_dir18,0
+  def extension_white_listextension_white_list36,0
+
+app/mailers/application_mailer.rb,67
+class ApplicationMailer < ActionMailer::BaseApplicationMailer1,0
+
+app/models/article.rb,194
+class Article < ApplicationRecordArticle1,0
+  def set_defaults; endset_defaults12,0
+  def self.finance; endfinance14,0
+  def self.recentrecent16,0
+  def self.category(cat)category20,0
+
+app/models/book.rb,179
+class Book < ApplicationRecordBook1,0
+  def self.psychologypsychology11,0
+  def self.sciencescience15,0
+  def self.recentrecent19,0
+  def self.category(cat)category23,0
+
+app/models/ckeditor/attachment_file.rb,176
+class Ckeditor::AttachmentFile < Ckeditor::AssetAttachmentFile3,0
+class Ckeditor::AttachmentFile < Ckeditor::AssetCkeditor::AttachmentFile3,0
+  def url_thumburl_thumb6,0
+
+app/models/ckeditor/asset.rb,329
+class Ckeditor::Asset < ActiveRecord::BaseAsset3,0
+class Ckeditor::Asset < ActiveRecord::BaseCkeditor::Asset3,0
+  delegate :url, :current_path, :content_type, to: :dataurl6,0
+  delegate :url, :current_path, :content_type, to: :datacurrent_path6,0
+  delegate :url, :current_path, :content_type, to: :datacontent_type6,0
+
+app/models/ckeditor/picture.rb,152
+class Ckeditor::Picture < Ckeditor::AssetPicture3,0
+class Ckeditor::Picture < Ckeditor::AssetCkeditor::Picture3,0
+  def url_contenturl_content6,0
+
+app/models/titan.rb,250
+class Titan < ApplicationRecordTitan1,0
+  has_many :titan_bookstitan_books2,0
+  has_many :titan_bookstitan_books=2,0
+  has_many :titan_bookstitan_book_ids2,0
+  has_many :titan_bookstitan_book_ids=2,0
+  def self.by_positionby_position10,0
+
+app/models/application_record.rb,67
+class ApplicationRecord < ActiveRecord::BaseApplicationRecord1,0
+
+app/models/user.rb,40
+class User < ApplicationRecordUser1,0
+
+app/models/titan_book.rb,222
+class TitanBook < ApplicationRecordTitanBook1,0
+  belongs_to :titantitan2,0
+  belongs_to :titantitan=2,0
+  belongs_to :titanbuild_titan2,0
+  belongs_to :titancreate_titan2,0
+  belongs_to :titancreate_titan!2,0
+
+app/jobs/application_job.rb,58
+class ApplicationJob < ActiveJob::BaseApplicationJob1,0
+
+app/controllers/application_controller.rb,79
+class ApplicationController < ActionController::BaseApplicationController1,0
+
+app/controllers/pages_controller.rb,103
+class PagesController < ApplicationControllerPagesController1,0
+  def newsletter; endnewsletter2,0
+
+app/controllers/articles_controller.rb,353
+class ArticlesController < ApplicationControllerArticlesController1,0
+  def indexindex7,0
+  def showshow28,0
+  def newnew42,0
+  def edit; endedit47,0
+  def toggle_statustoggle_status49,0
+  def createcreate59,0
+  def updateupdate75,0
+  def destroydestroy87,0
+  def set_articleset_article98,0
+  def article_paramsarticle_params103,0
+
+app/controllers/books_controller.rb,336
+class BooksController < ApplicationControllerBooksController1,0
+  def indexindex7,0
+  def showshow31,0
+  def newnew45,0
+  def edit; endedit50,0
+  def createcreate54,0
+  def updateupdate68,0
+  def destroydestroy80,0
+  def toggle_statustoggle_status87,0
+  def set_bookset_book100,0
+  def book_paramsbook_params105,0
+
+app/controllers/concerns/default_page_content.rb,79
+module DefaultPageContentDefaultPageContent1,0
+  def set_titleset_title8,0
+
+app/controllers/concerns/set_source.rb,63
+module SetSourceSetSource1,0
+  def set_sourceset_source6,0
+
+app/controllers/concerns/devise_whitelist.rb,115
+module DeviseWhitelistDeviseWhitelist1,0
+  def configure_permitted_parametersconfigure_permitted_parameters8,0
+
+app/controllers/titans_controller.rb,322
+class TitansController < ApplicationControllerTitansController1,0
+  def indexindex9,0
+  def sortsort15,0
+  def showshow25,0
+  def newnew32,0
+  def edit; endedit37,0
+  def createcreate40,0
+  def updateupdate54,0
+  def destroydestroy66,0
+  def set_titanset_titan77,0
+  def titan_paramstitan_params82,0
+
+app/helpers/pages_helper.rb,35
+module PagesHelperPagesHelper1,0
+
+app/helpers/articles_helper.rb,147
+module ArticlesHelperArticlesHelper1,0
+  def image_generator(height:, width:)image_generator2,0
+  def article_img(_img, _type)article_img6,0
+
+app/helpers/books_helper.rb,153
+module BooksHelperBooksHelper1,0
+  def image_generator(height:, width:)image_generator2,0
+  def book_img(_img)book_img6,0
+  def buy(link)buy14,0
+
+app/helpers/titans_helper.rb,139
+module TitansHelperTitansHelper1,0
+  def image_generator(height:, width:)image_generator2,0
+  def titan_img(_img, _type)titan_img6,0
+
+app/helpers/application_helper.rb,228
+module ApplicationHelperApplicationHelper1,0
+  def login_helperlogin_helper2,0
+  def source_helpersource_helper11,0
+  def active?(path)active?15,0
+  def alertsalerts19,0
+  def alert_generator(msg)alert_generator24,0
+
+app/channels/application_cable/connection.rb,195
+module ApplicationCableApplicationCable1,0
+  class Connection < ActionCable::Connection::BaseConnection2,0
+  class Connection < ActionCable::Connection::BaseApplicationCable::Connection2,0
+
+app/channels/application_cable/channel.rb,177
+module ApplicationCableApplicationCable1,0
+  class Channel < ActionCable::Channel::BaseChannel2,0
+  class Channel < ActionCable::Channel::BaseApplicationCable::Channel2,0
+
+config/application.rb,159
+module HeadShelfHeadShelf21,0
+  class Application < Rails::ApplicationApplication22,0
+  class Application < Rails::ApplicationHeadShelf::Application22,0
+
+db/migrate/20200722004213_add_missing_indexes_on_taggings.acts_as_taggable_on_engine.rb,227
+  class AddMissingIndexesOnTaggings < ActiveRecord::Migration[4.2]; endAddMissingIndexesOnTaggings3,0
+  class AddMissingIndexesOnTaggings < ActiveRecord::Migration; endAddMissingIndexesOnTaggings5,0
+  def changechange8,0
+
+db/migrate/20200814223511_create_ckeditor_assets.rb,120
+class CreateCkeditorAssets < ActiveRecord::Migration[5.2]CreateCkeditorAssets3,0
+  def upup4,0
+  def downdown21,0
+
+db/migrate/20200722004210_add_taggings_counter_cache_to_tags.acts_as_taggable_on_engine.rb,258
+  class AddTaggingsCounterCacheToTags < ActiveRecord::Migration[4.2]; endAddTaggingsCounterCacheToTags3,0
+  class AddTaggingsCounterCacheToTags < ActiveRecord::Migration; endAddTaggingsCounterCacheToTags5,0
+  def self.upup8,0
+  def self.downdown17,0
+
+db/migrate/20200816204201_add_twitter_to_articles.rb,107
+class AddTwitterToArticles < ActiveRecord::Migration[5.2]AddTwitterToArticles1,0
+  def changechange2,0
+
+db/migrate/20200806004544_add_position_to_titans.rb,105
+class AddPositionToTitans < ActiveRecord::Migration[5.2]AddPositionToTitans1,0
+  def changechange2,0
+
+db/migrate/20200816200137_add_preview_to_books.rb,101
+class AddPreviewToBooks < ActiveRecord::Migration[5.2]AddPreviewToBooks1,0
+  def changechange2,0
+
+db/migrate/20200719223340_create_titans.rb,91
+class CreateTitans < ActiveRecord::Migration[5.2]CreateTitans1,0
+  def changechange2,0
+
+db/migrate/20200719215214_add_slug_to_books.rb,95
+class AddSlugToBooks < ActiveRecord::Migration[5.2]AddSlugToBooks1,0
+  def changechange2,0
+
+db/migrate/20200814211646_add_thumb_image_to_book.rb,105
+class AddThumbImageToBook < ActiveRecord::Migration[5.2]AddThumbImageToBook1,0
+  def changechange2,0
+
+db/migrate/20200816200155_add_preview_to_articles.rb,107
+class AddPreviewToArticles < ActiveRecord::Migration[5.2]AddPreviewToArticles1,0
+  def changechange2,0
+
+db/migrate/20200719224039_add_slug_to_titans.rb,97
+class AddSlugToTitans < ActiveRecord::Migration[5.2]AddSlugToTitans1,0
+  def changechange2,0
+
+db/migrate/20200817201110_add_slug_to_articles.rb,101
+class AddSlugToArticles < ActiveRecord::Migration[5.2]AddSlugToArticles1,0
+  def changechange2,0
+
+db/migrate/20200811204413_remove_column.rb,91
+class RemoveColumn < ActiveRecord::Migration[5.2]RemoveColumn1,0
+  def changechange2,0
+
+db/migrate/20200722004208_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb,242
+  class ActsAsTaggableOnMigration < ActiveRecord::Migration[4.2]; endActsAsTaggableOnMigration3,0
+  class ActsAsTaggableOnMigration < ActiveRecord::Migration; endActsAsTaggableOnMigration5,0
+  def self.upup8,0
+  def self.downdown33,0
+
+db/migrate/20200818191140_create_titan_books.rb,99
+class CreateTitanBooks < ActiveRecord::Migration[5.2]CreateTitanBooks1,0
+  def changechange2,0
+
+db/migrate/20200719213637_create_books.rb,89
+class CreateBooks < ActiveRecord::Migration[5.2]CreateBooks1,0
+  def changechange2,0
+
+db/migrate/20200722004211_add_missing_taggable_index.acts_as_taggable_on_engine.rb,234
+  class AddMissingTaggableIndex < ActiveRecord::Migration[4.2]; endAddMissingTaggableIndex3,0
+  class AddMissingTaggableIndex < ActiveRecord::Migration; endAddMissingTaggableIndex5,0
+  def self.upup8,0
+  def self.downdown12,0
+
+db/migrate/20200814201714_add_thumb_image_to_article.rb,111
+class AddThumbImageToArticle < ActiveRecord::Migration[5.2]AddThumbImageToArticle1,0
+  def changechange2,0
+
+db/migrate/20200724171323_devise_create_users.rb,101
+class DeviseCreateUsers < ActiveRecord::Migration[5.2]DeviseCreateUsers3,0
+  def changechange4,0
+
+db/migrate/20200722004209_add_missing_unique_indices.acts_as_taggable_on_engine.rb,234
+  class AddMissingUniqueIndices < ActiveRecord::Migration[4.2]; endAddMissingUniqueIndices3,0
+  class AddMissingUniqueIndices < ActiveRecord::Migration; endAddMissingUniqueIndices5,0
+  def self.upup8,0
+  def self.downdown18,0
+
+db/migrate/20200720221625_create_articles.rb,95
+class CreateArticles < ActiveRecord::Migration[5.2]CreateArticles1,0
+  def changechange2,0
+
+db/migrate/20200816174715_add_buy_to_books.rb,93
+class AddBuyToBooks < ActiveRecord::Migration[5.2]AddBuyToBooks1,0
+  def changechange2,0
+
+db/migrate/20200722004212_change_collation_for_tag_names.acts_as_taggable_on_engine.rb,216
+  class ChangeCollationForTagNames < ActiveRecord::Migration[4.2]; endChangeCollationForTagNames5,0
+  class ChangeCollationForTagNames < ActiveRecord::Migration; endChangeCollationForTagNames7,0
+  def upup10,0
+
+db/migrate/20200719224959_add_post_status_to_books.rb,107
+class AddPostStatusToBooks < ActiveRecord::Migration[5.2]AddPostStatusToBooks1,0
+  def changechange2,0
+
+db/migrate/20200811204134_add_taglist_to_books.rb,101
+class AddTaglistToBooks < ActiveRecord::Migration[5.2]AddTaglistToBooks1,0
+  def changechange2,0
+
+db/migrate/20200731192354_add_roles_to_users.rb,97
+class AddRolesToUsers < ActiveRecord::Migration[5.2]AddRolesToUsers1,0
+  def changechange2,0
+
+db/migrate/20200721015706_add_post_status_to_articles.rb,113
+class AddPostStatusToArticles < ActiveRecord::Migration[5.2]AddPostStatusToArticles1,0
+  def changechange2,0

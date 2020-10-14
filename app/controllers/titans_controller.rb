@@ -26,6 +26,7 @@ class TitansController < ApplicationController
    @titan_image = @titan.thumb_image
    @page_title = @titan.name
    @titan_preview = @titan.body
+   @seo_keywords = "#{@titan.name} book recommendations"
   end
 
   # GET /titans/new

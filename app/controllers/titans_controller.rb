@@ -24,7 +24,7 @@ class TitansController < ApplicationController
   # GET /titans/1.json
   def show
    @titan_image = @titan.thumb_image
-   @page_title = @titan.name
+   @page_title = "#{@titan.name} book recommendations"
    @titan_preview = @titan.body
    @seo_keywords = "#{@titan.name} book recommendations"
   end

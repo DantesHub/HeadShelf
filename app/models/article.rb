@@ -13,7 +13,7 @@ class Article < ApplicationRecord
   def self.finance; end
 
   def self.favorites
-    Article.tagged_with(%w[favorites], any: true).order('created_at DESC')
+    Article.tagged_with(%w[popular], any: true).order('created_at DESC')
   end
 
   def self.recent

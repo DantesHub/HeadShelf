@@ -1,3 +1,4 @@
+$articleGlobal = 'Favorites'
 class Article < ApplicationRecord
   acts_as_taggable_on :tags
   enum status: { draft: 0, published: 1 }
@@ -6,20 +7,25 @@ class Article < ApplicationRecord
   validates_presence_of :title, :body, :preview, :author
   after_initialize :set_defaults
   # friendly_id :title, use: :slugged
-
   mount_uploader :thumb_image, ArticleUploader
 
   def set_defaults; end
-
   def self.finance; end
+
+  def self.favorites
+    Article.tagged_with(%w[favorites], any: true).order('created_at DESC')
+  end
 
   def self.recent
     order('created_at DESC')
   end
 
   def self.category(cat)
+    $articleGlobal = cat.to_s
     if cat == 'finance'
       Article.tagged_with(%w[finance], any: true).order('created_at DESC')
+    elsif cat == "popular"
+      Article.tagged_with(%w[popular], any:true).order('created_at DESC')
     elsif cat == 'science'
       Article.tagged_with(%w[science], any: true).order('created_at DESC')
     elsif cat == 'health'

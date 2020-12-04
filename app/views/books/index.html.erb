@@ -1,9 +1,8 @@
-  <meta content="fda" property="og:image">
-  <meta content="fdafsad" property="og:description">
   <div class="container">
     <%= render partial: 'shared/article_jumbotron', locals: {image_link: "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/1/cover.jpeg"}%>
     <div class="w-clearfix w-dyn-items container">
-      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path %>" data-remote="true">ALL</a></div>
+       <div  role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path %>"data-remote="true">Favorites</a></div>
+      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "all") %>"data-remote="true">ALL</a></div>
       <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "finance") %>" data-remote="true">Finance</a></div>
       <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "science") %>" data-remote="true">Science</a></div>
       <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= books_path(:category => "technology") %>" data-remote="true">Technology</a></div>
@@ -28,7 +27,8 @@
       <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= books_path(:category => "success") %>" data-remote="true">Success</a></div>
     </div>
     <br>
-    <h2 id="our-notes">Our Notes</h2>
+    <%= puts "vvss vsdfsdvsa vdsavdsvs" %>
+    <h2 id="our-notes">My Notes</h2>
     <div class="create-note"><%= link_to 'Create New Book note', new_book_path if logged_in?(:site_admin) %></div>
     <br>
     <div class="grid" id="books">

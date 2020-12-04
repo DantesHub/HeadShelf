@@ -9,18 +9,27 @@ class ArticlesController < ApplicationController
                   if !params[:category].nil?
                     Article.page(params[:page]).per(5).category(params[:category]).recent.published
                   else
-                    Article.page(params[:page]).per(5).recent.published
+                    Article.page(params[:page]).per(5).favorites.recent.published
                 end
                 else
                   if !params[:category].nil?
                     Article.page(params[:page]).per(5).category(params[:category]).recent.all
                   else
-                    Article.page(params[:page]).per(5).recent.all
+                    Article.page(params[:page]).per(5).favorites.recent.all
              end
           end
           @seo_keywords = "brainstack, articles, knowledge, productivity, entrepreneurship"
           @article_preview  = "Articles on creativity, entrepreneurship, productivity, finance, technology and so much more. "
           @article_url = request.original_url
+          if !params[:category].nil?
+            @category =  params[:category].to_s
+          else
+            @category = "Popular"
+          end
+  end
+
+  def update_category 
+    @category = params[:category].to_s
   end
 
   # GET /articles/1

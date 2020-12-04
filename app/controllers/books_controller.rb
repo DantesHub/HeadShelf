@@ -4,26 +4,31 @@ class BooksController < ApplicationController
   layout 'book'
   # GET /books
   # GET /books.json
-  def index
-    @books = if !logged_in?(:site_admin) && !logged_in?(:admin)                  
+  def index 
+    @books = if !logged_in?(:site_admin) && !logged_in?(:admin)  
             if !params[:category].nil?
                  Book.category(params[:category]).recent.published
+                 @category =  params[:category].to_s
                  redirect_to articles_path
                else
-                 Book.recent.published
+                 Book.favorite.recent.published
              end
              else
+              puts "************************************************"
                if !params[:category].nil?
+                @category =  params[:category].to_s
                  Book.category(params[:category]).recent.all
                else
-                 Book.recent.all
-             end
+                Book.favorite.recent.all
+              end
     end
     @page_title = 'BrainStack | Book '
     @seo_keywords = 'book notes, book summaries'
     @books_preview = 'Timeless knowledge, advice and wisdom to help you become better than you were yesterday. Book notes and summaries to help you remember and understand what you read'
     @books_url = request.original_url
-
+  #  if params[:category].nil?
+  #   @category = "Favorite" 
+  #  end
   end
 
   # GET /books/1

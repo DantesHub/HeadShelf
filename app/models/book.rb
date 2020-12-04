@@ -8,27 +8,25 @@ class Book < ApplicationRecord
 
   mount_uploader :thumb_image, BookUploader
 
-  def self.psychology
-    Book.tagged_with(%w[psychology], any: true).order('created_at ASC')
-  end
+def self.recent
+  Book.order('created_at DESC')
+end
 
-  def self.science
-    Book.tagged_with(%w[science], any: true).order('created_at ASC')
-    end
-
-  def self.recent
-    order('created_at DESC')
+  def self.favorite
+    Book.tagged_with(%w[favorites], any: true).order('created_at DESC')
   end
 
   def self.category(cat)
     if cat == 'finance'
       Book.tagged_with(%w[finance], any: true).order('created_at DESC')
+    elsif cat == "favorites"
+      Book.tagged_with(%w[favorites], any:true).order('created_at DESC')
     elsif cat == 'science'
       Book.tagged_with(%w[science], any: true).order('created_at DESC')
     elsif cat == 'technology'
       Book.tagged_with(%w[technology], any: true).order('created_at DESC')
     elsif cat == 'career/life'
-      Book.tagged_with(%w[career/life], any: true).order('created_at DESC')
+      Book.tagged_with(%w[career], any: true).order('created_at DESC')
     elsif cat == 'creativity'
       Book.tagged_with(%w[creativity], any: true).order('created_at DESC')
     elsif cat == 'mindfulness'
@@ -66,11 +64,11 @@ class Book < ApplicationRecord
     elsif cat == 'systems'
       Book.tagged_with(%w[systems], any: true).order('created_at DESC')
     elsif cat == 'social science'
-      Book.tagged_with(%w[social science], any: true).order('created_at DESC')     
+      Book.tagged_with(%w[social-science], any: true).order('created_at DESC')     
     elsif cat == 'success'
       Book.tagged_with(%w[success], any: true).order('created_at DESC')    
     else
-      order('created_at DESC')
+      Book.order('created_at DESC')
     end
 
   # scope :marketing_items, -> { where(topic_id: 3) }

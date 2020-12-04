@@ -3,6 +3,7 @@
        <div class="d-flex justify-content-center entry-title">
          <h2 class="blog-post-title"><%= link_to article.title , article %></h2>
        </div>
+        <p class ="center-text"><%= article.tag_list %></p>
        <div class="d-flex justify-content-center">
          <p class="blog-post-meta">Published <%= distance_of_time_in_words(article.created_at, Time.now) %> ago </p>
        </div>

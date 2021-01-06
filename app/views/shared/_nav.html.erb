@@ -1,23 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-light container">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
   </button>
-    <h2 style = "margin-top: 10px; font-size: 2rem;">Brainstack</h2>
+  <h2 style="margin-top: 10px; font-size: 2rem;">Brainstack</h2>
 
-    <a class="navbar-brand" href="#"><%= image_tag  "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/thumb_image/1/brainstack_logo.png" , width: 50, height: 50%></a>
+  <a class="navbar-brand" href="#"><%= image_tag  "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/thumb_image/1/brainstack_logo.png" , width: 50, height: 50%></a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-    
+
     </ul>
-          <ul class="navbar-nav thelinks" style = "margin-right: 0">
-              <li class = "nav-item"><%= link_to "Articles", articles_path, class: 'nav-link' %></li>
-          <li class = "nav-item"><%= link_to "Book Notes", root_path, class: 'nav-link' %></li>
-                 <li class = "nav-item"><%= link_to "Newsletter", newsletter_path, class: 'nav-link' %></li>
-        <li class = "nav-item"><%= link_to "Titans",titans_path, class: 'nav-link'%></li>
+    <ul class="navbar-nav thelinks" style="margin-right: 0">
+      <li class="nav-item"><%= link_to "Articles", articles_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to "Book Notes", books_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to "Newsletter", newsletter_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to "Titans",titans_path, class: 'nav-link'%></li>
 
- 
 
-        </ul>
+
+    </ul>
   </div>
 </nav>

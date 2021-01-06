@@ -1,42 +1,42 @@
+<div class="container" id="bing">
 
-
-<div class="container" id = "bing">
-
-<%= render partial: 'shared/article_jumbotron', locals: {image_link: "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/3/Messages_Image_742068698_.jpeg"}%>
-<div class="w-clearfix w-dyn-items container cats">
-      <div  role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "popular") %>"data-remote="true">Popular</a></div>
-      <div  role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "all") %>" data-remote="true">ALL</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "finance") %>" data-remote="true">Finance</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "science") %>" data-remote="true">Science</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "health") %>" data-remote="true">Health</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "self-improvement") %>" data-remote="true">Self-Improvement</a></div>
-       <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "reviews") %>" data-remote="true">Reviews</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "productivity") %>" data-remote="true">Productivity</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "marketing") %>" data-remote="true">Marketing</a></div>
-     <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Systems</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Writing</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Motivation</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Career/Life</a></div>
-        <div role="listitem" class="filter-item w-dyn-item">  <a class="p-2 text-muted" href="<%= articles_path(:category => "entrepreneurship") %>" data-remote="true">Entrepreneurship</a></div>
-      <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Creativity</a></div>
+  <%= render partial: 'shared/article_jumbotron', locals: {image_link: "https://brainstack.s3.us-east-2.amazonaws.com/uploads/titan/main_image/3/Messages_Image_742068698_.jpeg"}%>
+  <div class="w-clearfix w-dyn-items container cats">
+    <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "popular") %>" data-remote="true">Popular</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "all") %>" data-remote="true">ALL</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "finance") %>" data-remote="true">Finance</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "science") %>" data-remote="true">Science</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "health") %>" data-remote="true">Health</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "self-improvement") %>" data-remote="true">Self-Improvement</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "reviews") %>" data-remote="true">Reviews</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "productivity") %>" data-remote="true">Productivity</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"><a class="p-2 text-muted" href="<%= articles_path(:category => "marketing") %>" data-remote="true">Marketing</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Systems</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "tutorials") %>" data-remote="true">Tutorials</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Writing</a></div>
+    <%
+=begin%>
+    <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Motivation</a></div>
+    <%
+=end%>
+    <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Career/Life</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "entrepreneurship") %>" data-remote="true">Entrepreneurship</a></div>
+    <div role="listitem" class="filter-item w-dyn-item"> <a class="p-2 text-muted" href="<%= articles_path(:category => "systems") %>" data-remote="true">Creativity</a></div>
   </div>
-<br>
+  <br>
 
-  <div class = "container">
-  <div>
-<% if logged_in?(:admin) || logged_in?(:site_admin) %>
-    <%= link_to 'New Article', new_article_path %>
-  <% end %>
+  <div class="container">
+    <div>
+      <% if logged_in?(:admin) || logged_in?(:site_admin) %>
+      <%= link_to 'New Article', new_article_path %>
+      <% end %>
     </div>
     <!-- TODO: make this dynamic -->
-<div class = "container" id = "articles">
-   <%= render @articles %>
- <%= paginate @articles %>
- <br>
-     <%= render partial: 'shared/newsform', locals: {showThis: false} %>
-<br>
-<br>
- </div>
-
-
-
+    <div class="container" id="articles">
+      <%= render @articles %>
+      <%= paginate @articles %>
+      <br>
+      <%= render partial: 'shared/newsform', locals: {showThis: false} %>
+      <br>
+      <br>
+    </div>
